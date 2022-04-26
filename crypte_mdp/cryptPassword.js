@@ -11,6 +11,5 @@ let comparePassword = async function(plainPass, hashword){ // Permet de comparer
    let compare = bcrypt.compare(plainPass, hashword);
    return compare;
 };
-
 export {cryptPassword}
 export {comparePassword}

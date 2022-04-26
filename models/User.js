@@ -26,6 +26,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Manque mot de passe']
     },
+    
 //------------------------------------------------FORMULAIRE ADRESSE------------------------------------------------------------------------
     ndevoie: {
         type: Number,

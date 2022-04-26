@@ -41,6 +41,7 @@ export class UserController{
             return objerror; // et je retourne mon tableau d'erreur
         }
     }
+    
     //-----------------------------------------------------------------------------------------------------------------------------------------------
     static async getUsers(){
         return await User.find();
@@ -59,6 +60,7 @@ export class UserController{
     if(updtatedUser.dechets){
         updtatedUser.dechets = updtatedUser.dechets.toLowerCase()
     }
+    
     //--------------------------------------------------------------------
     let test = await fetch(encodeURI(`http://api.positionstack.com/v1/forward?access_key=${Config.ApiKey}&query=${updtatedUser.ndevoie}-${updtatedUser.tdevoie}-${updtatedUser.voiename}-${updtatedUser.codepostal}-${updtatedUser.ville}-${updtatedUser.pays}&country=FR`))
         test = await test.json()
@@ -81,17 +83,16 @@ export class UserController{
         let user = await User.findOne({ email: body.email });
         if(user){
             let compare = await comparePassword(body.password, user.password);
-            if (compare) {
-                return user;
-            }else{
-                objerror.error = "Le mot de passe n'est pas valide";
-                return objerror;
-            }
+        if(compare){
+            return user;
+        }else{
+            objerror.error = "Le mot de passe n'est pas valide";
+            return objerror;
+        }
         }else{
             objerror.error = "L'utilisateur n'existe pas !";
             return objerror;
         }
     }
 }
-
 export default UserController;

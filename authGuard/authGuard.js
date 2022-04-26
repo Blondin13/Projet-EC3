@@ -9,5 +9,4 @@ let groot = async (req, res, next) => { // C'est un middleware qui permettra de 
         res.redirect("/connexion");
     }
 };
-
 export default groot;

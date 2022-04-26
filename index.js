@@ -47,11 +47,11 @@ app.post("/contact", async (req, res) => {
     };
 
     transporter.sendMail(mailOptions, (err) => {
-        if(err){ // Si il y as une erreur on renvoie le msg "Votre message n'est pas transmis !" sur le formulaire
+        if(err){ // Si il y as une erreur on renvoie le msg "Votre message n'est pas transmis !" sur la page du formulaire
             message = "Votre message n'est pas transmis !";
             console.log(err);
             res.render("pages-visitors/contact.html.twig", { message });
-        }else{   // Sinon on renvoie le msg "Votre message est transmis !" sur le formulaire
+        }else{   // Sinon on renvoie le msg "Votre message est transmis !" sur la page du formulaire
             message = "Votre message est transmis !";
             res.render("pages-visitors/contact.html.twig", { message });
                 // On reste sur la page contact du mode visiteur
@@ -70,11 +70,11 @@ app.post("/contact-user/:id", groot, async (req, res) => {
     };
 
     transporter.sendMail(mailOptions, (err) => {
-        if(err){ // Si il y as une erreur on renvoie le msg "Votre message n'est pas transmis !" sur le formulaire
+        if(err){ // Si il y as une erreur on renvoie le msg "Votre message n'est pas transmis !" sur la page du formulaire
             message = "Votre message n'est pas transmis !";
             console.log(err);
             res.render("pages-users/contact-user.html.twig", { message });
-        }else{   // Sinon on renvoie le msg "Votre message est transmis !" sur le formulaire
+        }else{   // Sinon on renvoie le msg "Votre message est transmis !" sur la page du formulaire
             message = "Votre message est transmis !";
             res.render("pages-users/contact-user.html.twig", { message });
                 // On reste sur la page contact du mode utilisateur
@@ -145,7 +145,7 @@ app.get("/entreprises/:id", groot, async (req, res) => {
         user: req.session.user,
         cards: cards,
     });
-});    // Méthodes FICHE-COMPLETE et API
+});
 
 //----------------------------------------RECHERCHE--------------------------------------------
 app.get("/recherche/:id", groot, async (req, res) => {
@@ -193,8 +193,6 @@ app.get("/deconnexion", groot, async (req, res) => {
     req.session.destroy();
     res.redirect("/");
 });
-
-
 
 //------------------------------------------BESOINS-----------------------------------------
 app.get("/besoins/:id", groot, async (req, res) => {
@@ -273,7 +271,6 @@ app.post("/dechets/:id/:step", groot, async (req, res) => {
 });
 
 //-----------------------------------RENDU-CARD-COMPLETE---------------------------------------------
-
 app.get("/card-complete/:id", groot, async (req, res) => {
     let card = await User.findOne({_id: req.params.id});
     res.render("pages-users/fiche-complete.html.twig", {
