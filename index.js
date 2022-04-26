@@ -77,10 +77,9 @@ app.post("/contact-user/:id", groot, async (req, res) => {
         }else{   // Sinon on renvoie le msg "Votre message est transmis !" sur le formulaire
             message = "Votre message est transmis !";
             res.render("pages-users/contact-user.html.twig", { message });
-            
-                // On reste sur la page contact du mode visiteur
+                // On reste sur la page contact du mode utilisateur
         }
-    });  // * Ne fonstionne pas demander a Thomas si jai bien fait URGENT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    });
 });
 
 //---------------------------------ROUTE-MODE-VISITEUR--------------------------------------------------------------------
@@ -177,7 +176,7 @@ app.post("/mon-profil/:id", groot, async (req, res) => {
         res.redirect("/mon-profil/" + req.session.userId);
     }
 });
-
+//-------------------SUPPRIME COMPTE------------------------
 app.get("/supprime-compte/:id", groot, async (req, res) => {
     res.render("pages-users/supprime-compte.html.twig", {
         user: req.session.user,
@@ -189,7 +188,7 @@ app.post("/supprime-compte/:id", groot, async (req, res) => {
     req.session.destroy();
     res.redirect("/");
 });
-
+//---------------------DECONNEXION-------------------------
 app.get("/deconnexion", groot, async (req, res) => {
     req.session.destroy();
     res.redirect("/");
