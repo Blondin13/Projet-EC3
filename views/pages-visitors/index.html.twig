@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+    {% block header %}
+    	{% include "/nav-bar/nav-bar-visitor.html.twig" with {'active' : 'accueil'} %}
+    {% endblock %}
+    
+    {% block main %}
+    	{% include "/main/main-accueil.html.twig" %}
+    {% endblock %}
+    
+    {% block footer %}
+    	{% include "/footer/footer.html.twig" %}
+    {% endblock %}

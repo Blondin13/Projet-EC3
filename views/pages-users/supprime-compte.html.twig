@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+    {% block header %}
+        {% include "/nav-bar/nav-bar-supprime-compte.html.twig" %} 
+    {% endblock %}
+    
+     {% block main %}      
+        <main class="main-supprime-compte container">
+            <form class="form-sup" method="post">
+                <p class="p-sup"> Et tu sur de vouloir supprimer ton compte</p>
+                <img class="img-sup" src="/assets/img/frame-2.png">
+                <button type="submit" class="btn-sup"> Supprimer </button>
+            </form>
+            
+        
+        </main>
+    {% endblock %}
+    
+    

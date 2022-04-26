@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+    {% block header %}
+        {% include "/nav-bar/nav-bar-mon-profil.html.twig" %} 
+    {% endblock %}
+
+    {% block main %}
+        <main class="main-besoins container">
+            <aside>
+                <p class="p-2">Informations</p>
+                <div>
+                    <a href="/mon-profil/{{user.id}}">Coordonnées</a>
+                </div>
+                <div>
+                    <a href="/besoins/{{user.id}}">Besoins</a>
+                </div>
+                <div>
+                    <a href="/productions/{{user.id}}">Productions</a>
+                </div>
+                <div>
+                    <a href="/dechets/{{user.id}}">Déchets</a>
+                </div>
+            </aside>
+    	
+    		<article class="article-besoins">
+                <form class="form-besoins" id="besoins" action="/besoins" method="post">
+                <img class="paper-attention-b" src="/assets/img/papier.png">
+                    <p class="alerte-info"><strong>*Attention : Au moins un des champs "Besoins, Productions ou Déchets" est obligatoire*</strong></p>
+                <img class="p-gauche-b" src="/assets/img/p-gauche.png">
+                <img class="p-droite-b" src="/assets/img/p-droite.png">
+                    
+                <fieldset>
+                    <label for="text"><b class="b-monprofil">Vos besoins</b></label>
+                    <textarea class="textarea-besoins" name="besoins" id="text" cols="30" rows="10" placeholder="..........">{{user.besoins}}</textarea>
+                <div class="div-2-btn">
+                    <button class="btn-besoins" formaction="/besoins/{{user.id}}/{{step}}"><b>Valider</b></button>
+                    <button class="btn-besoins-suivant" formaction="/besoins/{{user.id}}/{{nextStep}}"><b>Valider => Suivant</b></button>
+                </div>
+                </fieldset>
+                    
+                    <div class = "error">
+                        {% for error in errors %}
+                            <span class="erreur">{{error}}</span>
+                        {% endfor %}
+                    </div> 
+                </form>
+            </article>
+        </main>
+    {% endblock %}

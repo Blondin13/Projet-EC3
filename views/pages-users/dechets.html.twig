@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+    {% block header %}
+        {% include "/nav-bar/nav-bar-mon-profil.html.twig" %} 
+    {% endblock %}
+
+    {% block main %}
+        <main class="main-dechets container">
+            <aside>
+                <p class="p-2">Informations</p>
+                <div>
+                    <a href="/mon-profil/{{user.id}}">Coordonnées</a>
+                </div>
+                <div>
+                    <a href="/besoins/{{user.id}}">Besoins</a>
+                </div>
+                <div>
+                    <a href="/productions/{{user.id}}">Productions</a>
+                </div>
+                <div>
+                    <a href="/dechets/{{user.id}}">Déchets</a>
+                </div>
+            </aside>
+    	
+    		<article class="article-dechets">
+                <form class="form-dechets" id="dechets" action="/dechets" method="post">
+                <img class="paper-attention-b" src="/assets/img/papier.png">
+                    <p class= "alerte-info"><strong>*Attention : Au moins un des champs "Besoins, Productions ou Déchets" est obligatoire*</strong></p>
+                <img class="p-gauche-b" src="/assets/img/p-gauche.png">
+                <img class="p-droite-b" src="/assets/img/p-droite.png">
+                 
+                <fieldset>
+                    <label for="text"><b class="d-monprofil"> Vos déchets </b></label>
+                    <textarea class="textarea-dechets" name="dechets" id="text" cols="30" rows="10" placeholder="..........">{{user.dechets}}</textarea>
+                    <div class="div-2-btn">
+                        <button class="btn-dechets" formaction="/dechets/{{user.id}}/{{step}}"><b>Valider</b></button>
+                    </div>
+                </fieldset>
+                
+                <div class = "error">
+                    {% for error in errors %}
+                        <span class="erreur">{{error}}</span>
+                    {% endfor %}
+                </div> 
+                </form>
+            </article>
+        </main>
+    {% endblock %}

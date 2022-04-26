@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+    {% block header %}
+        {% include "/nav-bar/nav-bar-mon-profil.html.twig" %} 
+    {% endblock %}
+    
+    {% block main %}
+        <img class="paper-attention" src="/assets/img/papier.png">
+        <p class= "alerte"><strong>*Attention : Pour afficher les distances, vous devez renseigner votre adresse*</strong></p>
+        <p class= "alerte-responsive-1"><strong>*Attention : Pour afficher les distances,</strong></p>
+        <p class= "alerte-responsive-2"><strong>vous devez renseigner votre adresse*</strong></p>
+        <img class="p-gauche" src="/assets/img/p-gauche.png">
+        <img class="p-droite" src="/assets/img/p-droite.png">      
+        <main class="main-monprofil container">
+            <aside>
+                <p class="p-2">Informations</p>
+                <div>
+                    <a href="/mon-profil/{{user.id}}">Coordonnées</a>
+                </div>
+                <div>
+                    <a href="/besoins/{{user.id}}">Besoins</a>
+                </div>
+                <div>
+                    <a href="/productions/{{user.id}}">Productions</a>
+                </div>
+                <div>
+                    <a href="/dechets/{{user.id}}">Déchets</a>
+                </div>
+            </aside>
+            
+    		<article class="article-monprofil">
+                <form class="form-monprofil" id="monprofil" action="/monprofil/{{user.id}}" method="post">
+                    <fieldset>
+                        <legend><b class="legend-monprofil"> Inscription </b></legend>
+                        <label for="nameinput"><b> Raison Social </b></label>
+                        <input type="text" name="ciename" id="cieinput" placeholder="Ecole-Ri7" value ="{{user.ciename}}"/>
+                        <label for="nameinput"><b> Votre nom </b></label>
+                        <input type="text" name="name" id="nameinput" placeholder="Dupont" value ="{{user.name}}" />
+                        <label for="nameinput"><b> Votre prénom </b></label>
+                        <input type="text" name="firstname" id="fisrtnameinput" placeholder="Jean" value ="{{user.firstname}}"/>
+                        <label for="nameinput"><b> Fonction </b></label>
+                        <input type="text" name="fonctionname" id="fonctioninput" placeholder="Directeur" value ="{{user.fonctionname}}"/>
+                        <label for="emailinput"><b> N° de siret </b></label>
+                        <input type="number" name="ndesiret" id="ndesiretinput" placeholder="ex: 898 323 365 00012" value ="{{user.ndesiret}}"/>
+                        <label for="nameinput"><b> Téléphone </b></label>
+                        <input type="tel" name="ndetel" id="ndetelinput" placeholder="ex: 0970449961 *Veuillez saisir le numéro sans espaces*" value ="{{user.ndetel}}"/>
+                        <label for="nameinput"><b> Ligne direct (facultatif) </b></label>
+                        <input type="tel" name="ldirect" id="ldirectinput" placeholder="ex: 0970449961 *Veuillez saisir le numéro sans espaces*" value ="{{user.ldirect}}"/>
+                        
+                        <button class="btn-monprofil" formaction="/mon-profil/{{user.id}}/{{step}}"><b> Valider </b></button>
+                        
+                        <img class="bande-attention" src="/assets/img/papier.png">
+                        <p class= "alerte1"><strong>*Attention : Vous devez compléter toutes vos informations pour apparaître dans la liste des entreprises*</strong></p>
+                        <img class="ruban-d" src="/assets/img/ruban-d.png">
+                        <img class="ruban-g" src="/assets/img/ruban-g.png">
+                    </fieldset>
+                    
+                    <fieldset class="fieldset-adress">
+                        <legend><b class="legend-2-monprofil"> Adresse </b></legend>
+                        <label for="nameinput"><b> N° de voie </b></label>
+                        <input type="number" name="ndevoie" id="ndevoieinput" placeholder="ex: 155" value ="{{user.ndevoie}}"/>
+                        <label for="nameinput"><b> Type de voie </b></label>
+                        <input type="text" name="tdevoie" id="tdevoieinput" placeholder="ex: Rue, Av, Bld" value ="{{user.tdevoie}}"/>
+                        <br>
+                        <label for="nameinput"><b> Nom de voie </b></label>
+                        <input type="text" name="voiename" id="voienameinput" placeholder="ex: du Dirigeable" value ="{{user.voiename}}"/>
+                        <label for="nameinput"><b> Complement d'adresse (facultatif) </b></label>
+                        <input type="text" name="complementad" id="complementadninput" placeholder="ex: zone industrielle" value ="{{user.complementad}}"/>
+                        <label for="nameinput"><b> Code Postal </b></label>
+                        <input type="number" name="codepostal" id="codepostalinput" placeholder="ex: 13400" value ="{{user.codepostal}}"/>
+                        <label for="nameinput"><b> Ville </b></label>
+                        <input type="text" name="ville" id="villeinput" placeholder="ex: Aubagne" value ="{{user.ville}}"/>
+                        <label for="nameinput"><b> Pays </b></label>
+                        <input type="text" name="pays" id="paysinput" placeholder="ex: France" value ="{{user.pays}}"/>
+                        <br>
+                        <label for="nameinput"><b> Joindre son logo (facultatif) </b></label>
+                        <input type="file" name="logo" id="logoinput"/>
+                        
+                        
+                        <a class="btn-supprimer-c" href="/supprime-compte/{{user.id}}"> Supprimer mon compte </a>
+                        
+                        <div class = "error">
+                            {% for error in errors %}
+                                <span class="erreur">{{error}}</span>
+                            {% endfor %}
+                        </div>
+                    </fieldset>
+                </form>
+            </article>
+        </main>
+    {% endblock %}

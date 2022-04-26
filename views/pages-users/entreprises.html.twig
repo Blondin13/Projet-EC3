@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+	{% block header %}
+		{% include "/nav-bar/nav-bar-user.html.twig" with {'active' : 'entreprises'}%}
+	{% endblock %}
+	
+	{% block main %}
+		<main class="main-entreprises">
+			<article class="article-entreprises row">
+			{% for card in cards %}
+				<div class="card-cie">
+					<img class="logo-vide" src="/assets/img/logo-vide.png" alt="logo">
+					<p class="p-card">Raison sociale: <span class="span-card"> {{card.ciename}}</span></p>
+					<p class="p-card">Adresse: <span class="span-card">{{card.ndevoie}} {{card.tdevoie}} {{card.voiename}} {{card.complementad}} {{card.codepostal}} {{card.ville}} {{card.pays}}</span></p>
+					<p class="p-card">N° tel: <span class="span-card">{{card.ndetel}}</span></p>
+					<p class="p-card">Besoins: <span class="span-card">{{card.besoins}}</span></p>
+					<p class="p-card">Productions: <span class="span-card">{{card.productions}}</span></p>
+					<p class="p-card">Déchets: <span class="span-card">{{card.dechets}}</span></p>
+					<br>
+					<a class="btn-fiche" href="/card-complete/{{card.id}}">-Voir fiche complète-</a>
+				</div>
+			{% endfor %}
+			</article>
+		</main>
+	{% endblock %}

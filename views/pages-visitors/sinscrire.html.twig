@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+    {% block header %}
+        {% include "/nav-bar/nav-bar-visitor.html.twig" %}    
+    {% endblock %}
+    
+    {% block main %}
+        <main class="main-sinscrire container">
+            <img class="img-bg_inscrip" src="/assets/img/bg-inscrip.png">
+    	    <article class="article-sinscrire">
+    	        <form class="form-sinscrire" id="sinscrire" action="/sinscrire" method="post">
+                    <fieldset>
+                        <legend><b class="b-monprofil"> Inscription </b></legend>
+                        <label for="nameinput"><b> Raison Social </b></label>
+                        <input type="text" name="ciename" id="cieinput" placeholder="Ecole-Ri7" />
+                        <label for="nameinput"><b> Votre nom </b></label>
+                        <input type="text" name="name" id="nameinput" placeholder="Dupont" />
+                        <label for="nameinput"><b> Votre prénom </b></label>
+                        <input type="text" name="firstname" id="fisrtnameinput" placeholder="Jean" />
+                        <label for="nameinput"><b> Fonction </b></label>
+                        <input type="text" name="fonctionname" id="fonctioninput" placeholder="Directeur" />
+                        <label for="emailinput"><b> Votre e-mail </b></label>
+                        <input type="email" name="email" id="emailinput" placeholder="Contact@exemple.com" />
+                        <label for="nameinput"><b> Mot de passe </b></label>
+                        <input type="password" name="password" id="mdpinput" placeholder="***" />
+                        <label for="nameinput"><b> Confirmation Mdp </b></label>
+                        <input type="password" name="confirmpassword" id="confirmdpinput" placeholder="***" />
+                        <br />
+                        <div class = "error">
+                            {% for error in errors %}
+                                <span class="erreur">{{error}}</span>
+                            {% endfor %}
+                        </div>
+                        <button><b>Valider</b></button>
+                    </fieldset>
+                </form>
+            </article>     
+        </main>
+    {% endblock %}
+ 

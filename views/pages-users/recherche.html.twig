@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+  	{% block header %}
+  		  {% include "/nav-bar/nav-bar-user.html.twig" with {'active' : 'recherche'}%}
+  	{% endblock %}
+  
+    {% block main %}
+        <main class="main-recherche container">
+            <h3><strong>Cochez votre catégorie</strong></h3>
+        		<article class="article-btn-radio">
+        		    <form class="form-btn-radio">
+                    <div>
+                        <input type="radio" id="radio-besoins" name="choix" value="besoins">
+                        <label for="besoins">Besoins</label>
+                    </div>
+                  
+                    <div>
+                        <input type="radio" id="radio-productions" name="choix" value="productions">
+                        <label for="productions">Productions</label>
+                      </div>
+                    
+                    <div>
+                        <input type="radio" id="radio-dechets" name="choix" value="dechets">
+                        <label for="dechets">Déchets</label>
+                    </div>
+                    
+                     <div>
+                        <input type="radio" id="radio-tous" name="choix" value="tous">
+                        <label for="tous">Tous</label>
+                    </div>
+                </form>
+            </article>
+                
+            <form class="form-bar-search">
+                <div>
+                    <label for="uname"> Entrez votre mot clé : </label>
+                    <input type="text" id="uname" name="name">
+                </div>
+                <div>
+                    <button class="btn-search">Search</button>
+                </div>
+            </form>
+            <img class="img-bg-search" src="/assets/img/logo2.png">
+        </main>
+    {% endblock %}

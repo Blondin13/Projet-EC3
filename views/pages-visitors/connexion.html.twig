@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+    {% block header %}
+        {% include "/nav-bar/nav-bar-visitor.html.twig" %}    
+    {% endblock %}
+    
+    {% block main %}
+        <main class="main-connexion container">
+            <img class="eolie-face" src="/assets/img/eolie-face.gif">
+            <img class="eolie-gauche" src="/assets/img/eolie-gauche.gif">
+            <img class="img-velo" src="/assets/img/velo.gif">
+            <img class="img-velo-2" src="/assets/img/velo-2.gif">
+            <img class="img-ylies" src="/assets/img/ylies.gif">
+            <img class="img-bg_connex-teste" src="/assets/img/bg-connex-teste-2.png">
+        		<article class="article-connexion">
+                    <form class="form-connexion" id="connexion" action="/connexion" method="post">
+                        <fieldset>
+                            <legend><b class="b-monprofil"> Connexion </b></legend>
+                            <br>
+                            <label for="emailinput"><b> Votre e-mail </b></label>
+                            <input type="email" name="email" id="emailinput" placeholder="Contact@exemple.com" />
+                            <br>
+                            <label for="nameinput"><b> Mot de passe </b></label>
+                            <input type="password" name="password" id="mdpinput" placeholder="******" />
+                            <br>
+                            <div class = "error">
+                                <span class="erreur">{{error}}</span>
+                            </div>
+                            <br>
+                            <button><b>Valider</b></button>
+                            <br>
+                            <a class="nous-rejoindre" href="/sinscrire">Nous rejoindre</a>
+                            <img class="logo-inscription" src="/assets/img/logo2.png" alt="logo.eco" width="200" height="200" />
+                        </fieldset>
+                    </form>
+                </article>     
+        </main>
+    {% endblock %}

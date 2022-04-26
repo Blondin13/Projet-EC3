@@ -1,0 +1,1460 @@
+/*----------------------------------------------------------1540PX---------------------------------------------------------------------*/
+@media screen and (max-width: 1540px){
+    /*-----------------------------INDEX----------------------------------------*/
+    .main-index{
+        height: 0px;
+    }
+    
+    /*-------------FOOTER---------------*/
+    footer{
+        margin-top: 555px;
+    }
+    
+    /*----------------------------CONTACT---------------------------------------*/
+    /*--------------BLOCK---------------*/
+    .article-contact{
+        margin-top: 50px;
+        padding: 0;
+    }
+    .article-contact form{
+        margin-top: 25px;
+    }
+    
+    /*------------BACKGROUND------------*/
+    .img-bg_contact{
+        margin-top: -89px;
+        margin-left: 454px;
+        position: absolute;
+    }
+      
+    /*---------------------------CONNEXION--------------------------------------*/
+    /*--------------BLOCK---------------*/   
+    .article-connexion{
+        margin-top: 0px;
+        padding: 0;
+    }
+    .form-connexion{
+        margin-top: 120px;
+    }
+    
+    /*------------BACKGROUND------------*/
+    .img-bg_connex-teste{
+        margin-top: 0px;
+        margin-right: 20px;
+    }
+    
+    /*------------EOLIENNES-------------*/
+    .eolie-face{
+        margin-top: 80px;
+        margin-left: 1010px;
+        width: 180px;
+    }
+    .eolie-gauche {
+        margin-top: 265px;
+        margin-left: 15px;
+    }
+    
+    /*--------------VELOS---------------*/    
+    .img-velo{
+        margin-top: 455px;
+        margin-left: 110px;   
+    }
+    .img-ylies{
+        margin-top: 455px;
+        margin-left: -300px;
+    }
+    .img-velo-2{
+        margin-top: 435px;
+        margin-left: 1000px;
+    }
+    
+    /*--------------------------INSCRIPTION-------------------------------------*/
+    /*--------------BLOCK---------------*/  
+    .article-sinscrire{
+        margin-top: 0px;
+        padding: 0;
+    }
+    
+    .form-sinscrire{
+        margin-top: 118px;
+    }
+    /*------------BACKGROUND------------*/ 
+    .img-bg_inscrip{
+        margin-top: 55px;
+        margin-right: 20px;
+    }
+    
+    /*--------------------------ENTREPRISES-------------------------------------*/
+    .main-entreprises{
+        width: 1500px;
+    }
+
+    /*---------------------------RECHERCHE--------------------------------------*/
+    .main-recherche{
+        margin-top: 20px;
+        width: 1200px;
+        height: 600px;
+    }
+    
+    .form-bar-search{
+        margin-left: 90px;
+    }
+    
+    .img-bg-search{
+        margin-top: 20px;
+    }
+    
+    /*---------------------------MON PROFIL-------------------------------------*/
+    .main-monprofil{
+        margin-left: 100px;
+    }
+    
+    .form-monprofil{
+        margin-top: 35px;
+    }
+    
+    .main-monprofil aside{
+        margin-top: 45px; 
+    }
+    
+    .alerte{
+        margin-left: 530px;
+    }
+    
+    .paper-attention{
+        margin-left: 480px;
+    }
+    
+    .p-gauche{
+        margin-left: 490px;
+    }
+    
+    .p-droite{
+        margin-left: 1130px;
+    }
+    
+    /*----------------------------------------------SUPPRIME-COMPTE--------------------------------------------*/
+    .main-supprime-compte{
+        margin-top: 40px;
+    }
+    
+    /*----------------------------BESOINS---------------------------------------*/
+    .main-besoins{
+        margin-left: 105px;
+    }
+    
+    .main-besoins aside{
+        margin-top: 45px; 
+    }
+    
+    .form-besoins{
+        margin-top: 25px;
+    }
+    
+    /*--------------------------PRODUCTIONS-------------------------------------*/
+    .main-productions{
+        margin-left: 105px;
+    }
+    
+    .main-productions aside{
+        margin-top: 45px; 
+    }
+    
+    .form-productions{
+        margin-top: 25px;
+    }
+    
+    /*----------------------------DECHETS---------------------------------------*/
+    .main-dechets{
+        margin-left: 105px;
+    }
+    
+    .main-dechets aside{
+        margin-top: 45px; 
+    }
+    
+    .form-dechets{
+        margin-top: 25px;
+    }
+    
+    /*-------------------------CARD COMPLETE------------------------------------*/
+    .section-card-complete{
+        margin: 17px;
+    }
+    
+    .article-card-complete{
+        width: 1480px;
+        height: 600px !important;
+    }
+    
+    .div-f-complete{
+        width: 600px;
+    }
+    
+    .logo-vide{
+        width: 180px;
+    }
+    
+    .p-card-complete{
+        line-height: 13px;
+        margin-left: 30px;
+        font-size: 1.1rem;
+    }
+    
+    #mapContainer{
+        width: 700px;  
+    }
+     
+}
+
+/*----------------------------------------------------------1200PX---------------------------------------------------------------------*/
+@media screen and (max-width: 1200px){
+    /*--------------------NAV-BAR-VISITOR------------------*/
+    .btn-connexion{
+        margin-left: 410px;
+    }
+    
+    /*-------------------------------FOOTER-------------------------------------*/
+    footer{
+        margin-top: 654px;
+    }
+    
+    /*-------------------------------CONTACT------------------------------------*/
+    /*--------------BLOCK---------------*/
+    .article-contact{
+        margin-top: 50px;
+        padding: 0;
+    }
+    .article-contact form{
+        margin-top: 60px;
+    }
+    
+    /*------------BACKGROUND------------*/
+    .img-bg_contact{
+        margin-top: -89px;
+        margin-left: 265px;
+    }
+    
+    /*---------------------------CONNEXION--------------------------------------*/
+    /*------------BACKGROUND------------*/
+    .img-bg_connex-teste{
+        margin-top: 136px;
+        width: 1100px;
+        margin-left: -80px;
+    }
+    
+    /*------------EOLIENNES-------------*/
+    .eolie-face{
+        margin-top: 175px;
+        margin-left: 780px;
+        width: 160px;
+    }
+    .eolie-gauche {
+        margin-top: 375px;
+        margin-left: -62px;
+        width: 160px;
+    }
+    
+    /*--------------VELOS---------------*/    
+    .img-velo{
+        margin-top: 502px;
+        margin-left: -50px;   
+    }
+    .img-ylies{
+        margin-top: 502px;
+        margin-left: -300px;
+    }
+    .img-velo-2{
+        margin-top: 483px;
+        margin-left: 790px;
+    }
+    
+    /*--------------------------INSCRIPTION-------------------------------------*/
+    /*------------BACKGROUND------------*/ 
+    .img-bg_inscrip{
+        margin-top: 180px;
+        width: 1100px;
+        margin-left: -80px;
+    }
+    
+    /*--------------------------ENTREPRISES-------------------------------------*/
+    .main-entreprises{
+        background-image: url("/assets/img/bg-main-1.png");
+        background-size: 50%;
+        width: 1180px;
+        margin-top: 20px;
+    }
+    
+    .div-f-complete{
+        width: 600px;
+    }
+    
+    .logo-vide{
+        width: 200px;
+    }
+    
+    .p-card-complete{
+        margin-left: 30px;
+        margin-top: 0px !important;
+        font-family: rosa;
+        letter-spacing: 1px;
+        text-align: start;
+        color: rgb(223, 219, 1);
+        text-shadow: 1px 1px 3px black;
+    }
+    
+    #mapContainer{
+        margin: auto;
+        margin-right: 10px;
+        height: 100%;
+        height: 580px;
+        width: 900px;
+        border-radius: 5px;
+        text-shadow: 1px 1px 3px black;
+        font-family: cursive !important;   
+    }
+    /*----------------------------RECHERCHE------------------------------------*/
+    .main-recherche{
+        margin-top: 40px !important;
+        height: 650px;
+    }
+    
+    .form-bar-search{
+        font-size: 1rem;
+        margin-left: 45px;
+        width: 850px;
+        height: 40px;
+        margin-top: 50px;
+    }
+    
+    .form-bar-search div{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .form-bar-search input{
+        width: 580px;
+    }
+    
+    /*---------------------NAV-BAR-USER--------------------*/
+    /*--------BOUTON-MON-PROFIL-------*/
+    .btn-mon-profil{
+        margin-left: 0;
+    }
+    .btn-deconnexion{
+        margin-left: 0;
+    }
+    
+    /*-------------------------------------------------MON PROFIL----------------------------------------------*/
+    .alerte{
+        margin-left: 355px;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    
+    .paper-attention{
+        margin-top: -20px;
+        margin-left: 300px;
+        height: 80px;
+        width: 580px;
+    }
+    
+    .p-gauche{
+        width: 35px;
+        margin-left: 310px;
+        margin-top: -30px;
+        
+    }
+    
+    .p-droite{
+        width: 35px;
+        margin-left: 830px;
+        margin-top: -30px;
+        
+    }
+    /*-----------------------------*/
+    .p-2{
+        font-size: 1.5rem;
+    }
+    
+    .main-monprofil aside{
+        width: 330px;
+        height: 600px;
+        margin-top: 65px;
+        margin-left: 30px;
+    }
+       
+    .main-monprofil aside div{
+        width: 240px;
+        height: 60px;
+    }
+    
+
+    .ruban-d{
+        width: 60px;
+        margin-top: 78px;
+        margin-left: 340px;
+    }
+    
+    .ruban-g{
+        margin-top: 80px;
+        width: 60px;
+        margin-left: -210px;
+    }
+    
+    .bande-attention{
+        height: 80px;
+        margin-top: 80px;
+        width: 590px;
+    }
+    
+    .alerte1{
+        margin-left: 110px;
+        margin-top: 50px;
+        width: 600px;
+        font-size: 12px;
+        font-weight:bold;
+    }
+    
+    .article-monprofil{
+        margin-top: 10px;
+        padding: 20px;
+    }
+    
+    .form-monprofil{
+        display: flex;
+        justify-content: space-around;
+        width: 822px;
+        height: 600px;
+        border-radius: 2%;
+    }
+    
+    .legend-monprofil{
+        font-size: 1.5rem;
+    }
+    
+    .legend-2-monprofil{
+        font-size: 1.5rem !important;
+    }
+    
+    
+    .article-monprofil input{
+        font-size: 1rem;
+        width: 95%;
+    }
+    
+    textarea{
+        font-size: 1rem;
+        height: 230px;
+    }
+    
+    .btn-monprofil{
+        margin-top: 30px;
+        margin-left: 90px;
+        width: 150px;
+    }
+    
+    /*-----------------------------------------------BESOINS------------------------------------------------------*/
+    .main-besoins aside{
+        width: 330px;
+        height: 600px;
+        margin-top: 65px;
+        margin-left: 30px;
+        
+    }
+    
+    .main-besoins aside div{
+        width: 240px;
+        height: 60px;
+    }
+    
+    .article-besoins{
+        margin-top: 20px;
+    }
+    
+    .form-besoins{
+        width: 822px;
+        height: 600px;
+        border-radius: 2%;
+    }
+    
+    /*---------------------------------------------PRODUCTIONS------------------------------------------------------*/
+    .main-productions aside{
+        width: 330px;
+        height: 600px;
+        margin-top: 65px;
+        margin-left: 30px;
+        
+    }
+       
+    .main-productions aside div{
+        width: 240px;
+        height: 60px;
+    }
+    
+    .article-productions{
+        margin-top: 20px;
+    }
+    
+    .form-productions{
+        width: 822px;
+        height: 600px;
+        border-radius: 2%;
+    }
+    
+    /*---------------------------------------------DECHETS------------------------------------------------------*/
+    .main-dechets aside{
+        width: 330px;
+        height: 600px;
+        margin-top: 65px;
+        margin-left: 30px;
+        
+    }
+       
+    .main-dechets aside div{
+        width: 240px;
+        height: 60px;
+    }
+    
+    .article-dechets{
+        margin-top: 20px;
+    }
+    
+    .form-dechets{
+        width: 822px;
+        height: 600px;
+        border-radius: 2%;
+    }
+    
+
+}
+
+/*--------------------------------------------------830PX---------------------------------------------------------------------*/
+@media screen and (max-width: 830px) {
+    /*----------------------------------------NAV-BAR-VISITOR----------------------------------------------------*/
+    .btn-connexion{
+        margin-left: 0px;
+    }
+
+    /*---------------------------------------------INDEX---------------------------------------------------------*/
+    .p-1{
+        font-size: 3rem;
+    }
+    
+    .p-index{
+        margin: 100px;
+        font-size: 2.5rem;
+    }
+    .p-index1{
+        margin: 5px;
+        font-size: 2.5rem;
+    }
+    
+    /*--------------------------------------------FOOTER---------------------------------------------------------*/
+    footer{
+        margin-top: 1014px;
+    }
+    
+    /*--------------------------------------------CONTACT--------------------------------------------------------*/
+    /*--------------BLOCK---------------*/
+    .article-contact{
+        margin-top: 40px;
+        padding: 0;
+    }
+    .article-contact form{
+        margin-top: 220px;
+    }
+    
+    /*------------BACKGROUND------------*/
+    .img-bg_contact{
+        margin-top: -89px;
+        margin-left: 150px;
+    }
+    
+    /*-------------------------------------------CONNEXION-------------------------------------------------------*/
+    .img-bg_connex-teste{
+        display: none;
+    }
+    
+    
+    /*------------EOLIENNES-------------*/
+    .eolie-face{
+        display: none;
+    }
+    .eolie-gauche{
+        display: none;
+    }
+    
+    /*--------------VELOS---------------*/
+    .img-velo{
+        display: none;
+    }
+    .img-velo-2{
+        display: none;
+    }
+    .img-ylies{
+        display: none;
+    }
+        
+    /*------------------------------------------INSCRIPTION------------------------------------------------------*/
+    .img-bg_inscrip{
+        display: none;
+    }
+    
+    /*------------------------------------------ENTREPRISES------------------------------------------------------*/
+    .main-entreprises{
+        background-image: url("/assets/img/bg-main-1.png");
+        background-size: 100%;
+        width: 820px;
+    }
+    
+    /*-------------------------------------------RECHERCHE-------------------------------------------------------*/
+    .main-recherche{
+        margin-top: 200px !important;
+        height: 700px;
+    }
+    
+    .form-bar-search{
+        font-size: 1rem;
+        margin-left: 25px;
+        width: 630px;
+        height: 40px;
+        margin-top: 50px;
+    }
+    
+    .form-bar-search div{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .form-bar-search input{
+        width: 380px;
+    }
+    /*-------------------------------------------------MON PROFIL----------------------------------------------*/
+    .alerte{
+        margin-left: 160px;
+        margin-top: -5px;
+        font-size: 16px;
+        display: inline !important;
+    }
+    
+    .alerte-responsive-1{
+        margin-left: 70px;
+        margin-top: 5px;
+        display: none !important;
+    }
+    .alerte-responsive-2{
+        margin-left: 78px;
+        margin-top: 20px;
+        display: none !important;
+    }
+    
+    .paper-attention{
+        position:absolute;
+        margin-top: -20px;
+        margin-left: 135px;
+        height: 80px;
+        width: 550px;
+        opacity: 10;
+    }
+    
+    .p-gauche{
+        width: 35px;
+        position: absolute;
+        margin-left: 140px;
+        margin-top: -30px;
+        
+    }
+    
+    .p-droite{
+        width: 35px;
+        position: absolute;
+        margin-left: 640px;
+        margin-top: -30px;
+        
+    }
+    /*-----------------------------*/
+    .main-monprofil{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+    /*-----------------------------*/
+    .p-2{
+        position: absolute;
+        margin-bottom: 110px;
+        margin-left: 280px;
+        font-size: 1.5rem;
+        
+    }
+    
+    .main-monprofil aside{
+        background-image: url(/assets/img/bg-aside.png);
+        background-size: 33%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 60px;
+        width: 680px;
+        height: 200px;
+        margin-left: 7px;
+    }
+    
+    aside div{
+        margin-left: 5px;
+        margin-right: 8px;
+        width: 160px;
+        height: 60px;
+    }
+    
+    .article-monprofil{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        height: 680px;
+        margin-left: -13px;
+    }
+    
+    .form-monprofil{
+        width: 680px;
+        border-radius: 2%;
+    }
+    
+    .form-monprofil fieldset{
+        width: 280px;
+    }
+    
+    .form-monprofil fieldset input{
+        width: 280px;  
+    }
+    
+    #ndevoieinput{
+        margin-top: 23px;
+        width: 40px;
+    }
+    
+    #tdevoieinput{
+        width: 40px;
+    }
+    
+    #voienameinput{
+        margin-top: 2px;
+    }
+    
+    #codepostalinput{
+        margin-top: 24px;
+        width: 40px;
+    }
+    
+    #villeinput{
+        width: 40px;
+    }
+    
+    #paysinput{
+        width: 40px;
+    }
+    
+    #logoinput{
+        width: 280px;
+        height: 29px;
+    }
+       
+    .ruban-d{
+        width: 60px;
+        margin-top: 80px;
+        margin-left: 320px;
+    }
+    
+    .ruban-g{
+        width: 60px;
+        margin-top: 80px;
+        margin-left: -278px;
+    }
+    
+    .bande-attention{
+        width: 650px;
+        height: 100px;
+        margin-top: 80px;
+        margin-left: -275px;
+    }
+    
+    .alerte1{
+        margin-left: 10px;
+        margin-top: 50px;
+        font-size: 17px;
+    }
+    /*-------NAV-BAR-BTN-----------*/
+    .btn-deconnexion{
+        margin-left: 50px;
+    }
+    
+    /*-------------------------------------------------BESOINS----------------------------------------------*/
+    /*-----------------------------*/
+    .main-besoins{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+    /*-----------------------------*/
+    .main-besoins aside{
+        background-image: url(/assets/img/bg-aside.png);
+        background-size: 33%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 60px;
+        width: 680px;
+        height: 200px;
+        margin-left: 7px;
+        border-radius: 2%;
+    }
+       
+    aside div{
+        margin-left: 5px;
+        margin-right: 8px;
+        width: 160px;
+        height: 60px;
+    }
+    
+    .article-besoins{
+        margin-top: 20px;
+        width: 720px;
+        height: 600px;
+        margin-left: -13px;
+    }
+    
+    /*----------------------------------------------PRODUCTIONS----------------------------------------------*/
+    /*-----------------------------*/
+    .main-productions{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+    /*-----------------------------*/
+    .main-productions aside{
+        background-image: url(/assets/img/bg-aside.png);
+        background-size: 33%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 60px;
+        width: 680px;
+        height: 200px;
+        margin-left: 7px;
+        border-radius: 2%;
+    }
+       
+    aside div{
+        margin-left: 5px;
+        margin-right: 8px;
+        width: 160px;
+        height: 60px;
+    }
+    
+    .article-productions{
+        margin-top: 20px;
+        width: 720px;
+        height: 600px;
+        margin-left: -13px;
+    }
+    
+    /*-------------------------------------------------DECHETS----------------------------------------------*/
+    /*-----------------------------*/
+    .main-dechets{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+    /*-----------------------------*/
+    .main-dechets aside{
+        background-image: url(/assets/img/bg-aside.png);
+        background-size: 33%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 60px;
+        width: 680px;
+        height: 200px;
+        margin-left: 7px;
+        border-radius: 2%;
+    }
+       
+    aside div{
+        margin-left: 5px;
+        margin-right: 8px;
+        width: 160px;
+        height: 60px;
+    }
+    
+    .article-dechets{
+        margin-top: 20px;
+        width: 720px;
+        height: 600px;
+        margin-left: -13px;
+    }
+    /*------------------*/
+    .paper-attention-b{
+        position:absolute;
+        height: 80px;
+        width: 650px;
+        opacity: 10;
+    }
+    
+    .p-droite-b{
+        width: 50px;
+        position: absolute;
+        margin-left: 300px;
+        margin-top: -20px;
+    }
+    
+    .p-gauche-b{
+        width: 50px;
+        position: absolute;
+        margin-left: -300px;
+        margin-top: -20px;
+    }
+    
+    .alerte-info{
+        margin-top: 27px;
+        font-size: 17px;
+        margin-right: 10px;
+    }
+    
+
+}
+
+/*--------------------------------------------------400PX---------------------------------------------------------------------*/
+@media screen and (max-width: 400px){
+    /*-------------------------------------NAV------------------------------------------*/
+    /*--------------------NAV-BAR-VISITOR------------------*/
+    .btn-connexion{
+        margin-left: 0px;
+    }
+    
+    /*---------------------NAV-BAR-USER--------------------*/
+    /*--------BOUTON-MON-PROFIL-------*/
+    .btn-mon-profil{
+        margin-left: 100px;
+    }
+
+    /*-----------------------------------INDEX-----------------------------------------*/
+    .p-1{
+        font-size: 2rem;
+    }
+    
+    .p-index{
+        margin: 5px;
+        font-size: 1.2rem;
+    }
+    .p-index1{
+        margin: 0;
+        font-size: 1.2rem;
+    }
+    
+    /*-----------------------------------FOOTER---------------------------------------*/
+    footer{
+        margin-top: 502px;
+    }
+    
+    /*-----------------------------------CONTACT--------------------------------------*/
+    .main-contact{
+        margin: 0 !important;
+    }
+    
+    .article-contact form{
+        width: 300px;
+        height: 470px;;
+        margin-top: 0 !important;
+    }
+    
+    textarea{
+        height: 150px !important;
+    }
+    
+    .img-bg_contact{
+        display:none;
+    }
+    
+    /*----------------------------------CONNEXION------------------------------------*/
+    .main-connexion{
+        height: 300px;
+    }
+    .article-connexion{
+        margin-top: 230px;
+        margin-left: 175px;
+        position: initial;
+    }
+    .form-connexion{
+        width: 300px;
+    }
+    .img-bg_connex-teste{
+        display: none;
+    }
+    
+    
+    /*------------EOLIENNES-------------*/
+    .eolie-face{
+        display: none;
+    }
+    .eolie-gauche{
+        display: none;
+    }
+    
+    /*--------------VELOS---------------*/
+    .img-velo{
+        display: none;
+    }
+    .img-velo-2{
+        display: none;
+    }
+    .img-ylies{
+        display: none;
+    }
+        
+    /*------------------------------------------------INSCRIPTION------------------------------------------------*/
+    .main-sinscrire{
+        height: 300px;
+    }
+    .article-sinscrire{
+        margin-top: 230px;
+        margin-left: 175px;
+        position: initial;
+    }
+    
+    .form-sinscrire{
+        width: 300px;
+    }
+    
+    .img-bg_inscrip{
+        display: none;
+    }
+    
+    
+    /*-------------------------------------------------ENTREPRISE------------------------------------------------*/
+    .main-entreprises{
+        background-image: none;
+        width: 375px;
+    }
+    .article-entreprises{
+        display: flex;
+        flex-direction: column;
+        width: 375px;
+        margin: 0;
+    }
+    
+    .card-cie{
+       margin-left: auto;
+       margin-right: auto;
+    }
+    
+    /*-----------------------------------------------FICHE COMPLETE----------------------------------------------*/
+    .article-card-complete{
+        display: flex;
+        flex-direction: column;
+        width: 365px;
+        height: 1000px !important;
+    }
+    
+    .logo-vide{
+        width: 120px;
+    }
+    
+    .p-card-complete{
+        line-height: 13px;
+        margin-left: 10px;
+        font-size: 1rem;
+        width: 360px;
+        overflow: hidden;    
+    }
+    
+    #mapContainer{
+        width: 350px;
+        height: 250px !important;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    
+    /*--------------------------------------------------RECHERCHE------------------------------------------------*/
+    h3{
+        font-size: 1.5rem;
+    }
+    
+    .main-recherche{
+        margin-top: 40px !important;
+        width: 365px;
+        height: 500px;
+    }
+    
+    .form-btn-radio{
+       margin-left: 35px;
+       display: flex;
+       justify-content: space-evenly;
+    }
+    
+    .article-btn-radio div label{
+        font-size: 1rem;
+    }
+    
+    .form-bar-search{
+        display: flex;
+        justify-content: center;
+        background-color: #579652 !important;
+        margin-left: 90px;
+        width: 150px;
+        height: 40px;
+        margin-top: 30px;
+    }
+    
+    .form-bar-search label{
+        margin-top: 28px;
+        font-size: 10px;
+    }
+    
+    .form-bar-search input{
+        width: 200px;
+        height: 38px;
+        margin-top: 32px;
+    }
+    
+    .btn-search{
+        margin-top: 30px;
+    }
+    
+    .img-bg-search{
+        margin-top: 40px;
+        margin-left: 30px;
+        width: 300px;
+    }
+    
+    /*-------------------------------------------------MON PROFIL----------------------------------------------*/
+    .alerte{
+        margin-left: 30px;
+        margin-top: -5px;
+        font-size: 15px;
+        display: none !important;
+    }
+    
+    .alerte-responsive-1{
+        margin-left: 70px;
+        margin-top: 5px;
+        display: inline !important;
+    }
+    .alerte-responsive-2{
+        margin-left: 78px;
+        margin-top: 20px;
+        display: inline !important;
+    }
+    
+    .paper-attention{
+        position:absolute;
+        margin-top: -20px;
+        margin-left: 50px;
+        height: 80px;
+        width: 280px;
+        opacity: 10;
+    }
+    
+    .p-gauche{
+        width: 35px;
+        position: absolute;
+        margin-left: 55px;
+        margin-top: -30px;
+        
+    }
+    
+    .p-droite{
+        width: 35px;
+        position: absolute;
+        margin-left: 285px;
+        margin-top: -30px;
+        
+    }
+    /*-----------------------------*/
+   
+    .p-2{
+        position: absolute;
+        margin-bottom: 110px;
+        margin-left: 115px;
+        font-size: 1.5rem;
+        
+    }
+    
+    .main-monprofil aside{
+        margin-top: 10px;
+        width: 360px;
+        height: 180px;
+        margin-left: -5px;
+    }
+    
+    aside div{
+        margin-left: 5px;
+        margin-right: 8px;
+        width: 80px !important;
+        height: 40px !important;
+    }
+    
+    aside div a{
+        font-size: 0.6rem !important;
+        display: flex;
+        align-items: center;
+        color: white !important;
+    }
+    
+    .article-monprofil{
+        display: flex;
+        flex-direction: column;
+        margin-top: -20px;
+        height: 680px;
+        margin-left: -25px;
+    }
+    
+    .form-monprofil{
+        width: 360px;
+        border-radius: 2%;
+    }
+    
+    .form-monprofil fieldset{
+        width: 180px;
+    }
+    
+    .form-monprofil fieldset input{
+        width: 160px;  
+    }
+    
+    #ndevoieinput{
+        width: 100px !important;
+    }
+    
+    #tdevoieinput{
+        width: 87px !important;
+    }
+    
+    #codepostalinput{
+        width: 88px !important;
+    }
+    
+    #villeinput{
+        width: 129px !important;
+    }
+    
+    #paysinput{
+        width: 126px !important;
+    }
+    
+    #logoinput{
+        width: 160px;
+        height: 29px;
+    }
+    
+    .ruban-d{
+        width: 60px;
+        margin-top: -125px;
+        margin-left: 205px;
+    }
+    
+    .ruban-g{
+        margin-top: -117px;
+        width: 60px;
+        margin-left: -93px;
+    }
+    
+    .bande-attention{
+        height: 80px;
+        margin-top: -120px;
+        width: 330px;
+        margin-left: -77px;
+    }
+    
+    .alerte1{
+        margin-left: 13px;
+        margin-top: -90px;
+        width: 330px;
+        font-size: 11px;
+        font-weight:bold;
+    }
+    
+    .legend-2-monprofil{
+        font-size: 1.5rem !important;
+    }
+    
+    .btn-monprofil{
+        margin-top: 130px;
+        margin-left: 90px;
+        width: 150px;
+    }
+    
+    /*----------------------------------NAV-BAR-BTN-------------------------------------*/
+    .btn-deconnexion{
+        margin-left: 50px;
+    }
+    
+    /*------------------------------------BESOINS---------------------------------------*/
+    .main-besoins aside{
+        margin-top: 10px;
+        width: 360px;
+        height: 180px;
+        margin-left: -5px;
+    }
+    
+    .article-besoins{
+        display: flex;
+        flex-direction: column;
+        margin-top: -20px;
+        width: 360px !important;
+        height: 680px;
+        margin-left: -25px;
+    }
+    
+    .form-besoins{
+        width: 360px;
+        border-radius: 2%;
+    }
+    
+    .form-besoins fieldset{
+        width: 360px;
+    }
+    
+    .form-besoins label{
+        width: 0px !important;
+    }
+    
+    .alerte-info{
+        margin-left: 30px !important;
+        font-size: 12px;
+    }
+    
+    .paper-attention-b{
+        width: 350px;
+    }
+    
+    .p-droite-b{
+        width: 30px;
+        margin-left: 160px;
+        margin-top: -10px;
+    }
+    
+    .p-gauche-b{
+        width: 30px;
+        margin-left: -160px;
+        margin-top: -5px;
+    }
+    
+    .b-monprofil{
+        font-size: 1.5rem !important;
+    }
+    
+    .textarea-besoins{
+        width: 300px;
+    }
+    
+    .btn-besoins{
+        margin-top: 120px;
+        margin-left: -2px;
+        width: 150px;
+    }
+    
+    .btn-besoins-suivant{
+        margin-top: 120px;
+        margin-left: -2px;
+        width: 150px;
+    }
+
+/*----------------------------------PRODUCTIONS-------------------------------------*/
+.main-productions aside{
+    margin-top: 10px;
+    width: 360px;
+    height: 180px;
+    margin-left: -5px;
+}
+
+.article-productions{
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+    width: 360px !important;
+    height: 680px;
+    margin-left: -25px;
+}
+
+.form-productions{
+    width: 360px;
+    border-radius: 2%;
+}
+
+.form-productions fieldset{
+    width: 360px;
+}
+
+.form-productions label{
+    width: 0px !important;
+}
+
+.p-monprofil{
+    font-size: 1.5rem !important;
+}
+
+.textarea-productions{
+    width: 300px;
+}
+
+.btn-productions{
+    margin-top: 120px;
+    margin-left: -2px;
+    width: 150px;
+}
+
+.btn-productions-suivant{
+    margin-top: 120px;
+    margin-left: -2px;
+    width: 150px;
+}
+
+/*-----------------------------------DECHETS---------------------------------------*/
+.main-dechets aside{
+    margin-top: 10px;
+    width: 360px;
+    height: 180px;
+    margin-left: -5px;
+}
+
+.article-dechets{
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+    width: 360px !important;
+    height: 680px;
+    margin-left: -25px;
+}
+
+.form-dechets{
+    width: 360px;
+    border-radius: 2%;
+}
+
+.form-dechets fieldset{
+    width: 360px;
+}
+
+.form-dechets label{
+    width: 0px !important;
+}
+
+.d-monprofil{
+    font-size: 1.5rem !important;
+}
+
+.textarea-dechets{
+    width: 300px;
+}
+
+.btn-dechets{
+    margin-top: 120px;
+    margin-left: -2px;
+    width: 150px;
+}
+
+}
