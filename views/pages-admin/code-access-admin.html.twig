@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+    {% block header %}
+        {% include "/nav-bar/header-admin.html.twig" %} 
+    {% endblock %}
+    
+    {% block main %}
+        <main class="main-connexion container">
+        		<article class="article-connexion">
+                    <form class="form-connexion" id="code-access-admin" action="/code-access-admin" method="post">
+                        <fieldset>
+                            <legend><b class="b-monprofil"> Code-Access-Administrateur </b></legend>
+                            <br>
+                            <br>
+                            <label for="codeinput"><b> Code d'acces </b></label>
+                            <input type="password" name="password" id="mdpinput" placeholder="******" />
+                            <br>
+                            <div class = "error">
+                                <span class="erreur">{{error}}</span>
+                            </div>
+                            <br>
+                            <button><b>Valider</b></button>
+                            <br>
+                        </fieldset>
+                    </form>
+                </article>     
+        </main>
+    {% endblock %}

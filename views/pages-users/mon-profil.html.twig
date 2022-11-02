@@ -74,9 +74,8 @@
                         <input type="text" name="pays" id="paysinput" placeholder="ex: France" value ="{{user.pays}}"/>
                         <br>
                         <label for="nameinput"><b> Joindre son logo (facultatif) </b></label>
-                        <input type="file" name="logo" id="logoinput"/>
-                        
-                        
+                        <input type="file" class="form-control" name="picture" id="image" accept=".jpg, .png, .jpeg" value ="{{logo.entreprise}}"/>
+                
                         <a class="btn-supprimer-c" href="/supprime-compte/{{user.id}}"> Supprimer mon compte </a>
                         
                         <div class = "error">

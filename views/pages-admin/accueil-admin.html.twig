@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+    {% block header %}
+        {% include "/nav-bar/nav-bar-admin.html.twig" with {'active' : 'accueil'}%}
+    {% endblock %}
+    
+    {% block main %}
+            <h5>Bienvenue-Administrateur: {{admin.nameAdmin}} </h5>
+    {% endblock %}

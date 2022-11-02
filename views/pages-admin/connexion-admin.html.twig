@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+    {% block header %}
+        {% include "/nav-bar/header-admin.html.twig" %} 
+    {% endblock %}
+    
+    {% block main %}
+        <main class="main-connexion container">
+        		<article class="article-connexion">
+                    <form class="form-connexion" id="connexion-admin" action="/connexion-admin" method="post">
+                        <fieldset>
+                            <legend><b class="b-monprofil"> Connexion-Administrateur </b></legend>
+                            <br>
+                            <label for="emailinput"><b> Votre e-mail </b></label>
+                            <input type="email" name="emailAdmin" id="emailinput" placeholder="Contact@exemple.com" />
+                            <br>
+                            <label for="nameinput"><b> Mot de passe </b></label>
+                            <input type="password" name="password" id="mdpinput" placeholder="******" />
+                            <br>
+                            <div class = "error">
+                                <span class="erreur">{{error}}</span>
+                            </div>
+                            <br>
+                            <button><b>Valider</b></button>
+                            <br>
+                            <br>
+                            <a class="nous-rejoindre" href="/formulaire-admin">Ajout-Admin</a>
+                            
+                        </fieldset>
+                    </form>
+                </article>     
+        </main>
+    {% endblock %}

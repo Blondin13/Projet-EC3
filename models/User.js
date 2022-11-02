@@ -44,7 +44,7 @@ const userSchema = new mongoose.Schema({
         type: Number,
     },
     latitude:{
-    type: Number,
+        type: Number,
     },
     longitude:{
         type: Number,
@@ -71,6 +71,9 @@ const userSchema = new mongoose.Schema({
         type: String,
     },
     dechets: {
+        type: String,
+    },
+    logo: {
         type: String,
     },
 })

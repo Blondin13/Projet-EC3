@@ -1,45 +1,73 @@
 {% extends 'base.html.twig' %}
 
-  	{% block header %}
-  		  {% include "/nav-bar/nav-bar-user.html.twig" with {'active' : 'recherche'}%}
-  	{% endblock %}
-  
-    {% block main %}
-        <main class="main-recherche container">
-            <h3><strong>Cochez votre catégorie</strong></h3>
-        		<article class="article-btn-radio">
-        		    <form class="form-btn-radio">
-                    <div>
-                        <input type="radio" id="radio-besoins" name="choix" value="besoins">
-                        <label for="besoins">Besoins</label>
-                    </div>
-                  
-                    <div>
-                        <input type="radio" id="radio-productions" name="choix" value="productions">
-                        <label for="productions">Productions</label>
-                      </div>
-                    
-                    <div>
-                        <input type="radio" id="radio-dechets" name="choix" value="dechets">
-                        <label for="dechets">Déchets</label>
-                    </div>
-                    
-                     <div>
-                        <input type="radio" id="radio-tous" name="choix" value="tous">
-                        <label for="tous">Tous</label>
-                    </div>
-                </form>
-            </article>
-                
-            <form class="form-bar-search">
-                <div>
-                    <label for="uname"> Entrez votre mot clé : </label>
-                    <input type="text" id="uname" name="name">
-                </div>
-                <div>
-                    <button class="btn-search">Search</button>
-                </div>
-            </form>
-            <img class="img-bg-search" src="/assets/img/logo2.png">
-        </main>
-    {% endblock %}
+{% block header %}
+	{% include "/nav-bar/nav-bar-user.html.twig" with {'active' : 'recherche'}%}
+{% endblock %}
+
+{% block main %}
+	<main class="main-recherche container">
+		<h3>
+			<strong>Cochez votre catégorie</strong>
+		</h3>
+		<article class="article-btn-radio">
+			<form class="form-btn-radio" method="get" action="/recherche/{{ user.id }}">
+				<div>
+					<input type="radio" id="radio-besoins" name="choix" value="besoins">
+					<label for="radio-besoins">Besoins</label>
+				</div>
+
+				<div>
+					<input type="radio" id="radio-productions" name="choix" value="productions">
+					<label for="radio-productions">Productions</label>
+				</div>
+
+				<div>
+					<input type="radio" id="radio-dechets" name="choix" value="dechets">
+					<label for="radio-dechets">Déchets</label>
+				</div>
+			</article>
+
+			<article class="form-bar-search">
+				<div>
+					<label for="search">
+						Entrez votre mot clé :
+					</label>
+					<input type="text" id="search" name="mot-cle">
+				</div>
+				<div>
+					<button class="btn-search">Search</button>
+				</div>
+			</article>
+		</form>
+
+          <article class="article-entreprises row">  
+			{% for finalUser in finalUsers %}
+				<div class="card-cie">
+					<img src=".assets/img/logos/{{finalUser}}/{{logo.entreprise}}" class="card-img-top"/>
+					<img class="logo-vide" src="/assets/img/logo-vide.png" alt="logo" {{finalUser.logo}}>
+					<p class="p-card">Raison sociale:
+						<span class="span-card">
+							{{finalUser.ciename}}</span>
+					</p>
+					<p class="p-card">Adresse:
+						<span class="span-card">{{finalUser.ndevoie}} {{finalUser.tdevoie}} {{finalUser.voiename}} {{finalUser.complementad}} {{finalUser.codepostal}} {{finalUser.ville}} {{finalUser.pays}}</span>
+					</p>
+					<p class="p-card">N° tel:
+						<span class="span-card">{{finalUser.ndetel}}</span>
+					</p>
+					<p class="p-card">Besoins:
+						<span class="span-card">{{finalUser.besoins}}</span>
+					</p>
+					<p class="p-card">Productions:
+						<span class="span-card">{{finalUser.productions}}</span>
+					</p>
+					<p class="p-card">Déchets:
+						<span class="span-card">{{finalUser.dechets}}</span>
+					</p>
+					<br>
+					<a class="btn-fiche" href="/card-complete/{{finalUser.id}}">-Voir fiche complète-</a>
+				</div>
+			{% endfor %}
+        </article>
+	</main>
+{% endblock %}

@@ -9,6 +9,46 @@
     src: url(/assets/font/outlander.ttf);
 }
 
+/*---------------------------------------------------HEARDER-ADMIN-----------------------------------------------------*/
+.btn-connexion-admin{
+    margin-left: 150px !important;
+    border-radius: 10px;
+    text-decoration: none !important;
+    font-family: out;
+    font-size: 1.5rem !important;
+    letter-spacing: 3px;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    text-decoration: none !important;
+    margin-bottom: 20px;
+}
+
+/*------------------------------------------------NAV-BAR-ADMIN--------------------------------------------------*/
+.btn-deconnexion-admin{
+    margin-left: 550px;
+    border-radius: 10px;
+    text-decoration: none !important;
+}
+.btn-deconnexion-admin:hover{
+    background-color: white;
+    border-radius: 10px;
+    color: black !important;
+    text-shadow: 1px 1px 3px gray !important;
+}
+
+/*-------------------------------------------------ACCUEIL-ADMIN-------------------------------------------------*/
+h5{
+    font-family: out;
+    font-size: 5rem !important;
+    letter-spacing: 3px;
+    color: #086900;
+    text-shadow: 2px 2px 4px black !important;
+    text-decoration: none !important;
+    text-align: center;
+    margin-top: 360px;
+}
+
+
 /*---------------------------------------------------NAV-BAR-----------------------------------------------------*/
 /*---------COLOR-NAV-BARS---------*/
 .navbar{
@@ -132,7 +172,8 @@ h1{
 footer{
     background-color: #086900 !important;
     height: 80px;
-    margin-top: 282px;
+    /*margin-top: 284px;*/
+    margin-top: 332px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,7 +209,7 @@ h2{
 .article-contact form{
     display: flex;
     justify-content: center;
-    margin-top: 135px;
+    margin-top: 155px;
     width: 600px;
     height: 520px;
     border: solid 1px black;
@@ -245,13 +286,13 @@ textarea{
 .form-connexion{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 130px;
     border: solid 1px black;
     border-radius: 2%;
     background-color:  #579652 !important;
     box-shadow: 1px 1px 2px rgb(92, 91, 91);
     width: 600px;
-    height: 520px;
+    height: 520px;  
 }
 .article-connexion fieldset{
     width: 500px;
@@ -316,14 +357,14 @@ b{
 
 /*------------BACKGROUND------------*/
 .img-bg_connex-teste{
-    margin-top: 99px;
+    margin-top: 118px;
     margin-right: 20px;
 }
 
 /*------------EOLIENNES-------------*/
 .eolie-face{
     position: absolute;
-    margin-top: 180px;
+    margin-top: 199px;
     margin-left: 1010px;
     width: 180px;
     height: 228px;
@@ -331,7 +372,7 @@ b{
 }
 .eolie-gauche{
     position: absolute;
-    margin-top: 365px;
+    margin-top: 385px;
     margin-left: 15px;
     width: 200px;
     opacity: 0.3;
@@ -342,7 +383,7 @@ b{
     position: absolute;
     width: 205px;
     transform: rotateY(180deg);
-    margin-top: 552px;
+    margin-top: 572px;
     margin-left: 110px;
     opacity: 0.4;
 }
@@ -350,14 +391,14 @@ b{
     position: absolute;
     width: 245px;
     transform: rotateY(180deg);
-    margin-top: 533px;
+    margin-top: 553px;
     margin-left: 1000px;
     opacity: 0.4;
 }
 .img-ylies{
     position: absolute;
     width: 150px;
-    margin-top: 554px;
+    margin-top: 572px;
     margin-left: -450px;
     opacity: 0.4;
     animation-duration: 10s;
@@ -393,7 +434,7 @@ b{
 .form-sinscrire{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 130px;
     border: solid 1px black;
     border-radius: 2%;
     background-color:  #579652 !important;
@@ -450,7 +491,7 @@ b{
 
 /*------------BACKGROUND------------*/
 .img-bg_inscrip{
-    margin-top: 153px;
+    margin-top: 173px;
     margin-right: 20px;
 }
 
@@ -583,7 +624,7 @@ h3{
     background-color: #579652;
     margin-top: 35px;
     width: 1200px;
-    height: 800px;
+    
     box-shadow: 1px 1px 2px rgb(92, 91, 91);
 }
 
@@ -661,15 +702,6 @@ input:checked {
     color: white;
     text-shadow: 1px 1px 2px black !important;
     background-color: #086900 !important;
-}
-
-.img-bg-search{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    width: 400px;
-    opacity: 0.3;
 }
 
 /*-------------------------------------------------MON PROFIL-----------------------------------------------------*/
@@ -979,8 +1011,7 @@ textarea{
     width: 100%;
     margin-top: 10px;
     margin-left: auto !important;
-    margin-right: auto !important;
-    
+    margin-right: auto !important;  
 }
 
 .btn-sup{

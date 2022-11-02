@@ -6,6 +6,9 @@ import Config from "./Config.js";
 import User from "./models/User.js";
 import groot from "./authGuard/authGuard.js";
 import UserController from "./controllers/User.js";
+import AdminController from "./controllers/Admin.js";
+import grootAdmin from "./authGuard/authGuard-admin.js";
+
 const db = `mongodb+srv://cc:${Config.mdpBDD}@eccc.0fr40.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 //----------------------------------DEMARAGE-DU-SERVER----------------------------------------------------------------------
@@ -13,15 +16,16 @@ const app = express(); // Crée une constante de l'application express
 app.use(session({ secret: "ssh", saveUninitialized: true, resave: true }));
 app.use(express.static("./public"));
 app.use(express.urlencoded({ extended: true }));
-app.listen(8024, () => { // Ecoute sur le port 8024
-console.log("Server a démarer dans http://localhost:8024"); // Renvoi le message "Server a démarer dans http://localhost:8024"
+app.listen(8024, () => {
+    // Ecoute sur le port 8024
+    console.log("Server a démarer dans http://localhost:8024"); // Renvoi le message "Server a démarer dans http://localhost:8024"
 });
 
 //-------------------------------CONNEXION-BASE-DE-DONNEES------------------------------------------------------------------
 mongoose.connect(db, (err) => {
-    if(err){
-        console.error("error" + err);        // Si il y as une erreur on renvoie le msg d'erreur sur le terminal
-    }else{
+    if (err) {
+        console.error("error" + err); // Si il y as une erreur on renvoie le msg d'erreur sur le terminal
+    } else {
         console.log("connected at mongoDb"); // Sinon on renvoie le msg "connected at mongoDb" sur le terminal
     }
 });
@@ -29,11 +33,11 @@ mongoose.connect(db, (err) => {
 //-------------------------------CONNEXION-A-LA-BOITE-MAIL------------------------------------------------------------------
 let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
-    auth:{
-        type: "login",        // Default
-        user: Config.mail,    // Je recupére le Config.mail créé dans mon fichier Config.js
+    auth: {
+        type: "login", // Default
+        user: Config.mail, // Je recupére le Config.mail créé dans mon fichier Config.js
         pass: Config.mdpMail, // Je recupére le Config.mdpMail créé dans mon fichier Config.js
-    },                        // Config.js et créé pour pouvoir cacher le mail et le mdp
+    }, // Config.js et créé pour pouvoir cacher le mail et le mdp
 });
 
 //---------------------FORMULAIRE-CONTACT-VISITOR-AVEC-L'ENVOIE-DU-MESSAGE---------------------------------------------------------
@@ -47,16 +51,18 @@ app.post("/contact", async (req, res) => {
     };
 
     transporter.sendMail(mailOptions, (err) => {
-        if(err){ // Si il y as une erreur on renvoie le msg "Votre message n'est pas transmis !" sur la page du formulaire
+        if (err) {
+            // Si il y as une erreur on renvoie le msg "Votre message n'est pas transmis !" sur la page du formulaire
             message = "Votre message n'est pas transmis !";
             console.log(err);
             res.render("pages-visitors/contact.html.twig", { message });
-        }else{   // Sinon on renvoie le msg "Votre message est transmis !" sur la page du formulaire
+        } else {
+            // Sinon on renvoie le msg "Votre message est transmis !" sur la page du formulaire
             message = "Votre message est transmis !";
             res.render("pages-visitors/contact.html.twig", { message });
-                // On reste sur la page contact du mode visiteur
+            // On reste sur la page contact du mode visiteur
         }
-    });         
+    });
 });
 
 //---------------------FORMULAIRE-CONTACT-USER-AVEC-L'ENVOIE-DU-MESSAGE---------------------------------------------------------
@@ -70,15 +76,84 @@ app.post("/contact-user/:id", groot, async (req, res) => {
     };
 
     transporter.sendMail(mailOptions, (err) => {
-        if(err){ // Si il y as une erreur on renvoie le msg "Votre message n'est pas transmis !" sur la page du formulaire
+        if (err) {
+            // Si il y as une erreur on renvoie le msg "Votre message n'est pas transmis !" sur la page du formulaire
             message = "Votre message n'est pas transmis !";
             console.log(err);
             res.render("pages-users/contact-user.html.twig", { message });
-        }else{   // Sinon on renvoie le msg "Votre message est transmis !" sur la page du formulaire
+        } else {
+            // Sinon on renvoie le msg "Votre message est transmis !" sur la page du formulaire
             message = "Votre message est transmis !";
             res.render("pages-users/contact-user.html.twig", { message });
-                // On reste sur la page contact du mode utilisateur
+            // On reste sur la page contact du mode utilisateur
         }
+    });
+});
+
+//-----------------------------------ROUTE-MODE-ADMIN------------------------------------------------------------------
+//----------------------------------CODE-ACCESS-ADMIN---------------------------------------------
+app.get("/code-access-admin", async (req, res) => {
+    res.render("pages-admin/code-access-admin.html.twig");
+});
+
+app.post("/code-access-admin", async (req, res) => {
+    const accessAdmin = Config.codeAadmin;
+    if (req.body.password !== accessAdmin) {
+        res.render("pages-admin/code-access-admin.html.twig", {
+            error: "Le code n'est pas correcte",
+        });
+    } else {
+        res.redirect("/connexion-admin/");
+    }
+});
+
+//----------------------------------CONNEXION-ADMIN---------------------------------------------
+app.get("/connexion-admin", async (req, res) => {
+    res.render("pages-admin/connexion-admin.html.twig");
+});
+
+app.post("/connexion-admin", async (req, res) => {
+    let admin = await AdminController.login(req.body);
+    if (admin.error) {
+        res.render("pages-admin/connexion-admin.html.twig", {
+            error: admin.error,
+        });
+    } else {
+        req.session.adminId = admin._id;
+        res.redirect("/accueil-admin/");
+    }
+});
+
+//---------------------------------INSCRIPTION-ADMIN------------------------------------------
+app.get("/formulaire-admin", async (req, res) => {
+    res.render("pages-admin/formulaire-admin.html.twig");
+});
+
+app.post("/formulaire-admin", async (req, res) => {
+    let admin = await AdminController.subscribe(req.body);
+    if (admin.errors) {
+        res.render("pages-admin/formulaire-admin.html.twig", {
+            errors: admin.errors,
+        });
+    } else {
+        req.session.adminId = admin._id;
+        res.redirect("/accueil-admin/" + req.session.adminId);
+    }
+});
+
+//----------------------------------ACCUEIL-ADMIN---------------------------------------------
+app.get("/accueil-admin/", grootAdmin, async (req, res) => {
+    res.render("pages-admin/accueil-admin.html.twig", {
+        admin: req.session.admin,
+    });
+});
+
+//--------------------------------ENTREPRISES-ADMIN-------------------------------------------
+app.get("/entreprises-admin/:id", grootAdmin, async (req, res) => {
+    let cards = await User.find();
+    res.render("pages-admin/entreprises-admin.html.twig", {
+        admin: req.session.admin,
+        cards: cards,
     });
 });
 
@@ -149,8 +224,24 @@ app.get("/entreprises/:id", groot, async (req, res) => {
 
 //----------------------------------------RECHERCHE--------------------------------------------
 app.get("/recherche/:id", groot, async (req, res) => {
+    const finalUsers = [];
+    if (req.query.choix && req.query["mot-cle"]) {
+        const choice = req.query.choix;
+        const keyword = req.query["mot-cle"];
+        const users = await User.find();
+
+        users.forEach((user) => {
+            if (user[choice]?.toLowerCase().includes(keyword)) {
+                finalUsers.push(user);
+            }
+        });
+    } else {
+        console.log("on recherche pas");
+    }
+
     res.render("pages-users/recherche.html.twig", {
         user: req.session.user,
+        finalUsers,
     });
 });
 
@@ -172,11 +263,12 @@ app.post("/mon-profil/:id", groot, async (req, res) => {
     let user = await UserController.updateUser(req.session.userId, req.body);
     if (user.modifiedCount == 1) {
         res.redirect("/besoins/" + req.session.userId);
-    }else{
+    } else {
         res.redirect("/mon-profil/" + req.session.userId);
     }
 });
-//-------------------SUPPRIME COMPTE------------------------
+
+//--------------------------------------SUPPRIME COMPTE----------------------------------------
 app.get("/supprime-compte/:id", groot, async (req, res) => {
     res.render("pages-users/supprime-compte.html.twig", {
         user: req.session.user,
@@ -184,17 +276,18 @@ app.get("/supprime-compte/:id", groot, async (req, res) => {
 });
 
 app.post("/supprime-compte/:id", groot, async (req, res) => {
-    await User.deleteOne({ _id: req.params.id})
+    await User.deleteOne({ _id: req.params.id });
     req.session.destroy();
     res.redirect("/");
 });
-//---------------------DECONNEXION-------------------------
+
+//----------------------------------------DECONNEXION------------------------------------------
 app.get("/deconnexion", groot, async (req, res) => {
     req.session.destroy();
     res.redirect("/");
 });
 
-//------------------------------------------BESOINS-----------------------------------------
+//------------------------------------------BESOINS--------------------------------------------
 app.get("/besoins/:id", groot, async (req, res) => {
     res.render("pages-users/besoins.html.twig", {
         user: req.session.user,
@@ -272,7 +365,7 @@ app.post("/dechets/:id/:step", groot, async (req, res) => {
 
 //-----------------------------------RENDU-CARD-COMPLETE---------------------------------------------
 app.get("/card-complete/:id", groot, async (req, res) => {
-    let card = await User.findOne({_id: req.params.id});
+    let card = await User.findOne({ _id: req.params.id });
     res.render("pages-users/fiche-complete.html.twig", {
         user: req.session.user,
         card: card,

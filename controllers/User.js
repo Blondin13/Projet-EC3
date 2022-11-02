@@ -10,10 +10,14 @@ import fs from "fs";
 const __filename = fileURLToPath(import.meta.url); // Retourne le chemin absolu du fichier en cours
 const __dirname = path.dirname(__filename); // Retourne le chemin absolu de la racine du projet
 
+//const directory = `${FileUrl}/logos/${req.session.userId}`
+//let picture = await pictureManager.addPicture(req.files.picture, directory, user._id); //j'ajoute une image dans le dossier specifié
+//user.picture = picture
+
 //---------------------------------------------verification formlaire d'inscription------------------------------------------------------------
 export class UserController{
     static async subscribe(user){
-        let objerror = {
+        let objerror = { 
             errors: [],
         };
         let userSaved = null;
@@ -61,7 +65,7 @@ export class UserController{
         updtatedUser.dechets = updtatedUser.dechets.toLowerCase()
     }
     
-    //--------------------------------------------------------------------
+    //-----------------------------------API----------------------------------------
     let test = await fetch(encodeURI(`http://api.positionstack.com/v1/forward?access_key=${Config.ApiKey}&query=${updtatedUser.ndevoie}-${updtatedUser.tdevoie}-${updtatedUser.voiename}-${updtatedUser.codepostal}-${updtatedUser.ville}-${updtatedUser.pays}&country=FR`))
         test = await test.json()
         if(test.data.length != 0){
@@ -89,6 +93,7 @@ export class UserController{
             objerror.error = "Le mot de passe n'est pas valide";
             return objerror;
         }
+        
         }else{
             objerror.error = "L'utilisateur n'existe pas !";
             return objerror;
