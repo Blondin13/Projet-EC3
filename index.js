@@ -8,6 +8,7 @@ import groot from "./authGuard/authGuard.js";
 import UserController from "./controllers/User.js";
 import AdminController from "./controllers/Admin.js";
 import grootAdmin from "./authGuard/authGuard-admin.js";
+import multer from "multer";
 
 const db = `mongodb+srv://cc:${Config.mdpBDD}@eccc.0fr40.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
@@ -21,6 +22,24 @@ app.listen(8024, () => {
     console.log("Server a démarer dans http://localhost:8024"); // Renvoi le message "Server a démarer dans http://localhost:8024"
 });
 
+//----------------------------------------MULTER----------------------------------------------------------------------------
+const storage = multer.diskStorage({
+    destination: function(req, file, callback){
+        callback(null, "./public/assets/logos");
+    },
+    filename: function(req, file, callback){
+        let filename = file.originalname.split(" ").join("");
+        
+        callback(null, Date.now() + filename)
+    }
+})
+
+const upload = multer({
+    storage: storage,
+    limits: {
+        fieldSize: 1024 * 1024 * 3
+    }
+})
 //-------------------------------CONNEXION-BASE-DE-DONNEES------------------------------------------------------------------
 mongoose.connect(db, (err) => {
     if (err) {
@@ -259,7 +278,10 @@ app.get("/mon-profil/:id", groot, async (req, res) => {
     });
 });
 
-app.post("/mon-profil/:id", groot, async (req, res) => {
+app.post("/mon-profil/:id", groot, upload.single("picture"), async (req, res) => {
+    if(req.file){
+        req.body.logo = req.file.filename
+    }
     let user = await UserController.updateUser(req.session.userId, req.body);
     if (user.modifiedCount == 1) {
         res.redirect("/besoins/" + req.session.userId);

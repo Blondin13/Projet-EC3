@@ -172,8 +172,8 @@ h1{
 footer{
     background-color: #086900 !important;
     height: 80px;
-    /*margin-top: 284px;*/
-    margin-top: 332px;
+    margin-top: 284px;
+    /*margin-top: 332px;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -525,6 +525,21 @@ b{
 
 .logo-vide{
     width: 200px;
+}
+
+.card-img-top{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 160px;
+    height: 160px;
+}
+
+.card-img-top-fiche-complete{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    width: 160px;
+    height: 160px;
 }
 
 .p-card{

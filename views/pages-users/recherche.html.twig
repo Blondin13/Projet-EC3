@@ -43,27 +43,17 @@
           <article class="article-entreprises row">  
 			{% for finalUser in finalUsers %}
 				<div class="card-cie">
-					<img src=".assets/img/logos/{{finalUser}}/{{logo.entreprise}}" class="card-img-top"/>
-					<img class="logo-vide" src="/assets/img/logo-vide.png" alt="logo" {{finalUser.logo}}>
-					<p class="p-card">Raison sociale:
-						<span class="span-card">
-							{{finalUser.ciename}}</span>
-					</p>
-					<p class="p-card">Adresse:
-						<span class="span-card">{{finalUser.ndevoie}} {{finalUser.tdevoie}} {{finalUser.voiename}} {{finalUser.complementad}} {{finalUser.codepostal}} {{finalUser.ville}} {{finalUser.pays}}</span>
-					</p>
-					<p class="p-card">N° tel:
-						<span class="span-card">{{finalUser.ndetel}}</span>
-					</p>
-					<p class="p-card">Besoins:
-						<span class="span-card">{{finalUser.besoins}}</span>
-					</p>
-					<p class="p-card">Productions:
-						<span class="span-card">{{finalUser.productions}}</span>
-					</p>
-					<p class="p-card">Déchets:
-						<span class="span-card">{{finalUser.dechets}}</span>
-					</p>
+				{% if finalUser.logo %}
+					<img src="/assets/logos/{{finalUser.logo}}" class="card-img-top"/>
+				{% else %}
+					<img class="logo-vide" src="/assets/img/logo-vide.png" alt="logo">
+				{% endif %}
+					<p class="p-card">Raison sociale:<span class="span-card"> {{finalUser.ciename}}</span></p>
+					<p class="p-card">Adresse:<span class="span-card"> {{finalUser.ndevoie}} {{finalUser.tdevoie}} {{finalUser.voiename}} {{finalUser.complementad}} {{finalUser.codepostal}} {{finalUser.ville}} {{finalUser.pays}}</span></p>
+					<p class="p-card">N° tel:<span class="span-card"> 0{{finalUser.ndetel}}</span></p>
+					<p class="p-card">Besoins:<span class="span-card"> {{finalUser.besoins}}</span></p>
+					<p class="p-card">Productions:<span class="span-card"> {{finalUser.productions}}</span></p>
+					<p class="p-card">Déchets:<span class="span-card"> {{finalUser.dechets}}</span></p>
 					<br>
 					<a class="btn-fiche" href="/card-complete/{{finalUser.id}}">-Voir fiche complète-</a>
 				</div>

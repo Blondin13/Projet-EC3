@@ -8,19 +8,23 @@
         <section class="section-card-complete">
             <article class="article-card-complete">
             	<div class="div-f-complete">
-                    <img class="logo-vide" src="/assets/img/logo-vide.png" alt="logo">
+                {% if card.logo %}
+					<img src="/assets/logos/{{card.logo}}" class="card-img-top-fiche-complete"/>
+				{% else %}
+					<img class="logo-vide" src="/assets/img/logo-vide.png" alt="logo">
+				{% endif %}
                     <p class="p-card-complete">Raison sociale: <span class="span-card"> {{card.ciename}}</span></p>
-                    <p class="p-card-complete">Nom: <span class="span-card">{{card.name}}</span></p>
-                    <p class="p-card-complete">Prénom: <span class="span-card">{{card.firstname}}</span></p>
-                    <p class="p-card-complete">Fonction: <span class="span-card">{{card.fonctionname}}</span></p>
-                    <p class="p-card-complete">Adresse: <span class="span-card">{{card.ndevoie}} {{card.tdevoie}} {{card.voiename}} {{card.complementad}} {{card.codepostal}} {{card.ville}} {{card.pays}}</span></p>
-                    <p class="p-card-complete">N° tel: <span class="span-card">{{card.ndetel}}</span></p>
-                    <p class="p-card-complete">Ligne direct: <span class="span-card">{{card.ldirect}}</span></p>
-                    <p class="p-card-complete">E-mail: <span class="span-card">{{card.email}}</span></p>
-                    <p class="p-card-complete">N° de siret: <span class="span-card">{{card.ndesiret}}</span></p>
-                    <p class="p-card-complete">Besoins: <span class="span-card">{{card.besoins}}</span></p>
-                    <p class="p-card-complete">Productions: <span class="span-card">{{card.productions}}</span></p>
-                    <p class="p-card-complete">Déchets: <span class="span-card">{{card.dechets}}</span></p>      	
+                    <p class="p-card-complete">Nom: <span class="span-card"> {{card.name}}</span></p>
+                    <p class="p-card-complete">Prénom: <span class="span-card"> {{card.firstname}}</span></p>
+                    <p class="p-card-complete">Fonction: <span class="span-card"> {{card.fonctionname}}</span></p>
+                    <p class="p-card-complete">Adresse: <span class="span-card"> {{card.ndevoie}} {{card.tdevoie}} {{card.voiename}} {{card.complementad}} {{card.codepostal}} {{card.ville}} {{card.pays}}</span></p>
+                    <p class="p-card-complete">N° tel: <span class="span-card"> 0{{card.ndetel}}</span></p>
+                    <p class="p-card-complete">Ligne direct: <span class="span-card"> {{card.ldirect}}</span></p>
+                    <p class="p-card-complete">E-mail: <span class="span-card"> {{card.email}}</span></p>
+                    <p class="p-card-complete">N° de siret: <span class="span-card"> {{card.ndesiret}}</span></p>
+                    <p class="p-card-complete">Besoins: <span class="span-card"> {{card.besoins}}</span></p>
+                    <p class="p-card-complete">Productions: <span class="span-card"> {{card.productions}}</span></p>
+                    <p class="p-card-complete">Déchets: <span class="span-card"> {{card.dechets}}</span></p>      	
                 </div>
                 
                 <div class="div-map" id="mapContainer" data-latitude={{card.latitude}} data-longitude={{card.longitude}}>  
