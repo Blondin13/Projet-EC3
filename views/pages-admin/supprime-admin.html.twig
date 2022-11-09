@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+    {% block header %}
+        {% include "/nav-bar/nav-bar-supprime-admin.html.twig" %} 
+    {% endblock %}
+    
+     {% block main %}      
+        <main class="main-supprime-compte container">
+            <form class="form-sup" method="post">
+                <p class="p-sup"> Est tu sur de vouloir supprimer l'admin</p>
+                <img class="img-sup" src="/assets/img/frame-2.png">
+                <button type="submit" class="btn-sup-ad"> Supprimer </button>
+            </form>
+        </main>
+    {% endblock %}

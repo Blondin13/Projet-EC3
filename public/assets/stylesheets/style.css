@@ -48,6 +48,47 @@ h5{
     margin-top: 360px;
 }
 
+.btn-supprimer-ad{
+    font-family: rosa !important;
+    font-size: 1rem !important;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px black !important;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 45%;
+    margin-top: 28px;
+    position: absolute;
+}
+
+.bande-admin{
+    position: absolute;
+    height: 80px;
+    width: 250px;
+    margin-left: 820px;
+    opacity: 10;
+}
+
+.btn-supprimer-ad:hover{
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px black;
+}
+
+/*-------------------------------------------------SUPPRIME-ADMIN-------------------------------------------------*/
+.btn-sup-ad{
+    color: white;
+    background-color: #086900;
+    font-family: rosa;
+    font-size: 1.3rem !important;
+    text-align: center;
+    border: solid 1px #0b4b05;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 2px;
+    margin-top: 20px;
+    width: 150px;
+    margin-left: 233px;
+}
+
 
 /*---------------------------------------------------NAV-BAR-----------------------------------------------------*/
 /*---------COLOR-NAV-BARS---------*/
@@ -1040,7 +1081,7 @@ textarea{
     border-radius: 2px;
     margin-top: 20px;
     width: 150px;
-    margin-left: 246px;
+    margin-left: 253px;
 }
 
 /*-------------------------------------------------BESOINS-------------------------------------------------------*/

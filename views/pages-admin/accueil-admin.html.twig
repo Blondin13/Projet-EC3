@@ -6,4 +6,7 @@
     
     {% block main %}
             <h5>Bienvenue-Administrateur: {{admin.nameAdmin}} </h5>
+            <br>
+            <img class="bande-admin" src="/assets/img/papier.png">
+            <a class="btn-supprimer-ad" href="/supprime-admin/{{admin.id}}"> Supprimer l'Administrateur </a>
     {% endblock %}

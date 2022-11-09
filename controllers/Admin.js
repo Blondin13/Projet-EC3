@@ -4,10 +4,11 @@ import { comparePassword } from "../crypte_mdp/cryptPassword.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
+
 const __filename = fileURLToPath(import.meta.url); // Retourne le chemin absolu du fichier en cours
 const __dirname = path.dirname(__filename); // Retourne le chemin absolu de la racine du projet
 
-//--------------------------------VERIFICATION FORMULAIRE D'INSCRIPTION------------------------------------------------------------
+//------------------------------VERIFICATION-FORMULAIRE-D'INSCRIPTION------------------------------------------------------------
 export class AdminController {
     static async subscribe(admin) {
         let objerror = {
@@ -51,33 +52,12 @@ export class AdminController {
         return await Admin.findOne({ _id: id }, excludeFields);
     }
 
-    /*static async updateUser(id, updtatedUser){
-    if(updtatedUser.besoins){
-        updtatedUser.besoins = updtatedUser.besoins.toLowerCase()
-    }
-    if(updtatedUser.productions){
-        updtatedUser.productions = updtatedUser.productions.toLowerCase()
-    }
-    if(updtatedUser.dechets){
-        updtatedUser.dechets = updtatedUser.dechets.toLowerCase()
-    }*/
-
-    //-----------------------------------API----------------------------------------
-    /*let test = await fetch(encodeURI(`http://api.positionstack.com/v1/forward?access_key=${Config.ApiKey}&query=${updtatedUser.ndevoie}-${updtatedUser.tdevoie}-${updtatedUser.voiename}-${updtatedUser.codepostal}-${updtatedUser.ville}-${updtatedUser.pays}&country=FR`))
-        test = await test.json()
-        if(test.data.length != 0){
-            console.log(test);
-        updtatedUser.latitude = test.data[0].latitude
-        updtatedUser.longitude = test.data[0].longitude
-    } 
-        return await User.updateOne({ _id: id }, updtatedUser);
-    }*/
-
-    static async deleteAdmin(id) {
+    //------------------------------SUPPRIME-ADMIN------------------------------------
+    static async deleteAdmin(id){
         return await Admin.deleteOne({ _id: id });
     }
 
-    //----------------------------CONNEXION-ADMIN-----------------------------------
+    //------------------------------CONNEXION-ADMIN-----------------------------------
     static async login(body) {
         let objerror = {
             error: "",

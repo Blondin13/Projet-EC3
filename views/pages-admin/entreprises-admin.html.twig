@@ -20,7 +20,9 @@
 					<p class="p-card">Besoins: <span class="span-card">{{card.besoins}}</span></p>
 					<p class="p-card">Productions: <span class="span-card">{{card.productions}}</span></p>
 					<p class="p-card">Déchets: <span class="span-card">{{card.dechets}}</span></p>
-					<a id="a-btn" class="btn btn-danger" data-bs-cardid="{{card.id}}" data-bs-toggle="modal" data-bs-target="#modal">Supprimer</a>
+					<form class="sup-user" method="post">
+						<button type="submit" class="btn-danger"> Supprimer </button>
+					</form>
 				</div>
 			{% endfor %}
 			</article>

@@ -10,11 +10,7 @@ import fs from "fs";
 const __filename = fileURLToPath(import.meta.url); // Retourne le chemin absolu du fichier en cours
 const __dirname = path.dirname(__filename); // Retourne le chemin absolu de la racine du projet
 
-//const directory = `${FileUrl}/logos/${req.session.userId}`
-//let picture = await pictureManager.addPicture(req.files.picture, directory, user._id); //j'ajoute une image dans le dossier specifié
-//user.picture = picture
-
-//---------------------------------------------verification formlaire d'inscription------------------------------------------------------------
+//---------------------------------VERIFICATION-FORMULAIRE-D'INSCRIPTION------------------------------------------------------------
 export class UserController{
     static async subscribe(user){
         let objerror = { 
@@ -76,10 +72,12 @@ export class UserController{
         return await User.updateOne({ _id: id }, updtatedUser);
     }
     
+    //------------------------------SUPPRIME-USER------------------------------------
     static async deleteUser(id){
         return await User.deleteOne({ _id: id });
     }
 
+    //------------------------------CONNEXION-USER-----------------------------------
     static async login(body){
         let objerror = {
             error: "",

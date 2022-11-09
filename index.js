@@ -17,8 +17,7 @@ const app = express(); // Crée une constante de l'application express
 app.use(session({ secret: "ssh", saveUninitialized: true, resave: true }));
 app.use(express.static("./public"));
 app.use(express.urlencoded({ extended: true }));
-app.listen(8024, () => {
-    // Ecoute sur le port 8024
+app.listen(8024, () => { // Ecoute sur le port 8024
     console.log("Server a démarer dans http://localhost:8024"); // Renvoi le message "Server a démarer dans http://localhost:8024"
 });
 
@@ -167,12 +166,35 @@ app.get("/accueil-admin/", grootAdmin, async (req, res) => {
     });
 });
 
+app.get("/deconnexion-ad", grootAdmin, async (req, res) => {
+    req.session.destroy();
+    res.redirect("/");
+});
+
+//---------------------------------SUPPRIME-ADMIN---------------------------------------------
+app.get("/supprime-admin/:id", grootAdmin, async (req, res) => {
+    res.render("pages-admin/supprime-admin.html.twig", {
+        admin: req.session.admin,
+    });
+});
+
+app.post("/supprime-admin/:id", grootAdmin, async (req, res) => {
+    await Admin.deleteOne({ _id: req.params.id });
+    req.session.destroy();
+    res.redirect("/");
+});
+
 //--------------------------------ENTREPRISES-ADMIN-------------------------------------------
 app.get("/entreprises-admin/:id", grootAdmin, async (req, res) => {
     let cards = await User.find();
     res.render("pages-admin/entreprises-admin.html.twig", {
         admin: req.session.admin,
         cards: cards,
+    });
+
+    app.post("/entreprises-admin/:id", grootAdmin, async (req, res) => {
+        await User.deleteOne({ _id: req.params.id });
+        res.redirect("/entreprises-admin/:id");
     });
 });
 
@@ -282,6 +304,7 @@ app.post("/mon-profil/:id", groot, upload.single("picture"), async (req, res) =>
     if(req.file){
         req.body.logo = req.file.filename
     }
+
     let user = await UserController.updateUser(req.session.userId, req.body);
     if (user.modifiedCount == 1) {
         res.redirect("/besoins/" + req.session.userId);
