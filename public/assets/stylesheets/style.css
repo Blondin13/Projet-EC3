@@ -1,4 +1,4 @@
-/*----------------------------------------------------FONT-------------------------------------------------------*/
+/*----------------------------------------------------FONT--------------------------------------------------*/
 @font-face{
    font-family: rosa;
    src: url(/assets/font/castameresansregular.ttf);
@@ -9,7 +9,7 @@
     src: url(/assets/font/outlander.ttf);
 }
 
-/*---------------------------------------------------HEARDER-ADMIN-----------------------------------------------------*/
+/*----------------------------------------------HEARDER-ADMIN----------------------------------------------*/
 .btn-connexion-admin{
     margin-left: 150px !important;
     border-radius: 10px;
@@ -23,7 +23,7 @@
     margin-bottom: 20px;
 }
 
-/*------------------------------------------------NAV-BAR-ADMIN--------------------------------------------------*/
+/*--------------------------------------------NAV-BAR-ADMIN------------------------------------------------*/
 .btn-deconnexion-admin{
     margin-left: 550px;
     border-radius: 10px;
@@ -36,7 +36,7 @@
     text-shadow: 1px 1px 3px gray !important;
 }
 
-/*-------------------------------------------------ACCUEIL-ADMIN-------------------------------------------------*/
+/*-------------------------------------------ACCUEIL-ADMIN-------------------------------------------------*/
 h5{
     font-family: out;
     font-size: 5rem !important;
@@ -74,7 +74,7 @@ h5{
     text-shadow: 1px 1px 3px black;
 }
 
-/*-------------------------------------------------SUPPRIME-ADMIN-------------------------------------------------*/
+/*-------------------------------------------------SUPPRIME-ADMIN----------------------------------------*/
 .btn-sup-ad{
     color: white;
     background-color: #086900;
@@ -625,7 +625,6 @@ b{
     border: solid 1px black;
     border-radius: 5px;
     width: 1480px;
-    height: 800px !important;
     box-shadow: 1px 1px 2px rgb(43, 43, 43);
 }
 
@@ -645,6 +644,7 @@ b{
     text-align: start;
     color: rgb(223, 219, 1);
     text-shadow: 1px 1px 3px black;
+    line-height: 20px;
 }
 
 #mapContainer{
@@ -758,6 +758,12 @@ input:checked {
     color: white;
     text-shadow: 1px 1px 2px black !important;
     background-color: #086900 !important;
+}
+
+.article-entreprises-search{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
 }
 
 /*-------------------------------------------------MON PROFIL-----------------------------------------------------*/
@@ -1473,4 +1479,3 @@ textarea{
 }
   
 /*-------------------------------------------------THE END------------------------------------------------------*/
-

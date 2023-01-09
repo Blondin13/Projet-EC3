@@ -9,6 +9,7 @@ import UserController from "./controllers/User.js";
 import AdminController from "./controllers/Admin.js";
 import grootAdmin from "./authGuard/authGuard-admin.js";
 import multer from "multer";
+import Admin from "./models/Admin.js";
 
 const db = `mongodb+srv://cc:${Config.mdpBDD}@eccc.0fr40.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
@@ -17,28 +18,30 @@ const app = express(); // Crée une constante de l'application express
 app.use(session({ secret: "ssh", saveUninitialized: true, resave: true }));
 app.use(express.static("./public"));
 app.use(express.urlencoded({ extended: true }));
-app.listen(8024, () => { // Ecoute sur le port 8024
+app.listen(8024, () => {
+    // Ecoute sur le port 8024
     console.log("Server a démarer dans http://localhost:8024"); // Renvoi le message "Server a démarer dans http://localhost:8024"
 });
 
 //----------------------------------------MULTER----------------------------------------------------------------------------
 const storage = multer.diskStorage({
-    destination: function(req, file, callback){
+    destination: function (req, file, callback) {
         callback(null, "./public/assets/logos");
     },
-    filename: function(req, file, callback){
+    filename: function (req, file, callback) {
         let filename = file.originalname.split(" ").join("");
-        
-        callback(null, Date.now() + filename)
-    }
-})
+
+        callback(null, Date.now() + filename);
+    },
+});
 
 const upload = multer({
     storage: storage,
     limits: {
-        fieldSize: 1024 * 1024 * 3
-    }
-})
+        fieldSize: 1024 * 1024 * 3,
+    },
+});
+
 //-------------------------------CONNEXION-BASE-DE-DONNEES------------------------------------------------------------------
 mongoose.connect(db, (err) => {
     if (err) {
@@ -149,13 +152,14 @@ app.get("/formulaire-admin", async (req, res) => {
 
 app.post("/formulaire-admin", async (req, res) => {
     let admin = await AdminController.subscribe(req.body);
+
     if (admin.errors) {
         res.render("pages-admin/formulaire-admin.html.twig", {
             errors: admin.errors,
         });
     } else {
         req.session.adminId = admin._id;
-        res.redirect("/accueil-admin/" + req.session.adminId);
+        res.redirect("/accueil-admin");
     }
 });
 
@@ -179,7 +183,7 @@ app.get("/supprime-admin/:id", grootAdmin, async (req, res) => {
 });
 
 app.post("/supprime-admin/:id", grootAdmin, async (req, res) => {
-    await Admin.deleteOne({ _id: req.params.id });
+    await Admin.deleteOne({ _id: JSON.parse(req.body.id) });
     req.session.destroy();
     res.redirect("/");
 });
@@ -191,12 +195,14 @@ app.get("/entreprises-admin/:id", grootAdmin, async (req, res) => {
         admin: req.session.admin,
         cards: cards,
     });
-
-    app.post("/entreprises-admin/:id", grootAdmin, async (req, res) => {
-        await User.deleteOne({ _id: req.params.id });
-        res.redirect("/entreprises-admin/:id");
-    });
 });
+
+app.post("/entreprises-admin/:id", grootAdmin, async (req, res) => {
+    await User.deleteOne({ _id: req.body.id });
+    res.redirect("/entreprises-admin/:id");
+});
+
+
 
 //---------------------------------ROUTE-MODE-VISITEUR--------------------------------------------------------------------
 //---------------------------------------INDEX------------------------------------------------
@@ -246,6 +252,8 @@ app.post("/sinscrire", async (req, res) => {
     }
 });
 
+
+
 //------------------------------------ROUTE-MODE-USERS--------------------------------------------------------------------
 //----------------------------------------ACCUEIL----------------------------------------------
 app.get("/accueil/", groot, async (req, res) => {
@@ -277,7 +285,6 @@ app.get("/recherche/:id", groot, async (req, res) => {
             }
         });
     } else {
-        console.log("on recherche pas");
     }
 
     res.render("pages-users/recherche.html.twig", {
@@ -301,8 +308,8 @@ app.get("/mon-profil/:id", groot, async (req, res) => {
 });
 
 app.post("/mon-profil/:id", groot, upload.single("picture"), async (req, res) => {
-    if(req.file){
-        req.body.logo = req.file.filename
+    if (req.file) {
+        req.body.logo = req.file.filename;
     }
 
     let user = await UserController.updateUser(req.session.userId, req.body);
@@ -417,7 +424,7 @@ app.get("/card-complete/:id", groot, async (req, res) => {
     });
 });
 
-//----------------------------------------------API--------------------------------------------------
+//------------------------------------------API------------------------------------------------------
 app.get("/test", groot, async (req, res) => {
     let user = req.session.user;
     let test = await fetch(

@@ -1,7 +1,8 @@
 import mongoose from "mongoose"
-const userSchema = new mongoose.Schema({
 
-//-------------------------------------------FORMULAIRE DE L'INSCRIPTION--------------------------------------------------------------------
+//-------------------------------------------FORMULAIRE D'INSCRIPTION USER--------------------------------------------------------------------
+const userSchema = new mongoose.Schema({
+//------------------------------------------------INFORMATION USER--------------------------------------------------------------------
     ciename: {
         type: String,
         required: [true, "Manque nom d'entreprise"],
@@ -27,7 +28,7 @@ const userSchema = new mongoose.Schema({
         required: [true, 'Manque mot de passe']
     },
     
-//------------------------------------------------FORMULAIRE ADRESSE------------------------------------------------------------------------
+//------------------------------------------------ADRESSE------------------------------------------------------------------------
     ndevoie: {
         type: Number,
     },

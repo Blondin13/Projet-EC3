@@ -4,7 +4,6 @@ import { comparePassword } from "../crypte_mdp/cryptPassword.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
-
 const __filename = fileURLToPath(import.meta.url); // Retourne le chemin absolu du fichier en cours
 const __dirname = path.dirname(__filename); // Retourne le chemin absolu de la racine du projet
 

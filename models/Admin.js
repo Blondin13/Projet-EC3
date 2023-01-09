@@ -1,26 +1,24 @@
 import mongoose from "mongoose";
-const adminSchema = new mongoose.Schema({
 
 //-------------------------------------------FORMULAIRE D'INSCRIPTION ADMIN--------------------------------------------------------------------
-
+const adminSchema = new mongoose.Schema({
     nameAdmin: {
         type: String,
-        required: [true, 'Manque nom'],
+        required: [true, "Manque nom"],
     },
     firstnameAdmin: {
         type: String,
-        required: [true, 'Manque prénom'],
+        required: [true, "Manque prénom"],
     },
     emailAdmin: {
         type: String,
-        required: [true, 'Manque votre mail'],
+        required: [true, "Manque votre mail"],
     },
     password: {
         type: String,
-        required: [true, 'Manque mot de passe']
+        required: [true, "Manque mot de passe"],
     },
-})
+});
 
-const Admin = mongoose.model('Admin', adminSchema);
+const Admin = mongoose.model("Admin", adminSchema);
 export default Admin;
-
