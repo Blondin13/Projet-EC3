@@ -8,7 +8,7 @@
     
     /*-------------FOOTER---------------*/
     footer{
-        margin-top: 547px;
+        margin-top: 773px !important;
     }
     
     /*-------------------CONTACT--------------------*/
@@ -40,32 +40,32 @@
     
     /*------------BACKGROUND------------*/
     .img-bg_connex-teste{
-        margin-top: -4px;
+        margin-top: 115px;
         margin-right: 20px;
     }
     
     /*------------EOLIENNES-------------*/
     .eolie-face{
-        margin-top: 79px;
+        margin-top: 196px;
         margin-left: 1010px;
         width: 180px;
     }
     .eolie-gauche {
-        margin-top: 265px;
+        margin-top: 382px;
         margin-left: 15px;
     }
     
     /*--------------VELOS---------------*/    
     .img-velo{
-        margin-top: 455px;
+        margin-top: 569px;
         margin-left: 110px;   
     }
     .img-ylies{
-        margin-top: 455px;
+        margin-top: 570px;
         margin-left: -300px;
     }
     .img-velo-2{
-        margin-top: 435px;
+        margin-top: 550px;
         margin-left: 1000px;
     }
     
@@ -81,7 +81,7 @@
     }
     /*------------BACKGROUND------------*/ 
     .img-bg_inscrip{
-        margin-top: 55px;
+        margin-top: 169px;
         margin-right: 20px;
     }
     
@@ -149,6 +149,14 @@
     
     .form-besoins{
         margin-top: 25px;
+    }
+
+    .p-droite-b{
+        margin-left: 640px; 
+    }
+    
+    .p-gauche-b{
+        margin-left: -660px;
     }
     
     /*-----------------PRODUCTIONS------------------*/
@@ -229,7 +237,7 @@ h5{
     
     /*-------------------FOOTER---------------------*/
     footer{
-        margin-top: 664px;
+        margin-top: 664px !important;
     }
     
     /*------------------CONTACT---------------------*/
@@ -254,6 +262,10 @@ h5{
         margin-top: 136px;
         width: 1100px;
         margin-left: -80px;
+    }
+
+    .form-connexion{
+        margin-top: 100px; 
     }
     
     /*------------EOLIENNES-------------*/
@@ -288,6 +300,10 @@ h5{
         margin-top: 180px;
         width: 1100px;
         margin-left: -80px;
+    }
+
+    .form-sinscrire{
+        margin-top: 100px;
     }
     
     /*----------------ENTREPRISES-------------------*/
@@ -541,11 +557,11 @@ h5{
     }
 }
 
-/*-----------------------------------830PX-Ipad Air-Vertical--------------------------------------*/
-@media screen and (max-width: 830px){
+/*-----------------------------------820PX-Ipad Air-Vertical--------------------------------------*/
+@media screen and (max-width: 835px){
     /*----------------NAV-BAR-ADMIN-----------------*/
     .btn-deconnexion-admin{
-        margin-left: 550px !important;
+        margin-left: 480px !important;
     }
 
     /*----------------ACCUEIL-ADMIN-----------------*/
@@ -578,21 +594,21 @@ h5{
 
     /*--------------------INDEX---------------------*/
     .p-1{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     .p-index{
         margin: 100px;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .p-index1{
         margin: 5px;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     /*--------------------FOOTER--------------------*/
     footer{
-        margin-top: 1024px;
+        margin-top: 1024px !important;
     }
     
     /*-------------------CONTACT--------------------*/
@@ -1015,10 +1031,17 @@ h5{
     h4{
         font-size: 1rem !important; 
     }
+
+    .btn-sup-ad{
+        margin-left: 150px;
+        margin-top: 10px;
+        width: 93px;
+    }
+    
     /*-----------------------NAV--------------------*/
     /*------------NAV-LOGO------------*/
     img{
-        margin-right: 100px;
+        margin-right: 220px;
     }
     
     /*--------NAV-BAR-VISITOR---------*/
@@ -1048,7 +1071,7 @@ h5{
     
     /*--------------------FOOTER--------------------*/
     footer{
-        margin-top: 580px;
+        margin-top: 580px !important;
     }
     
     /*-------------------CONTACT--------------------*/
@@ -1266,9 +1289,13 @@ h5{
         font-size: 1.5rem;
         
     }
-    
+
+    .main-monprofil{
+        margin-top: 20px;
+    }
+
     .main-monprofil aside{
-        margin-top: 10px;
+        margin-top: 0px;
         width: 360px;
         height: 180px;
         margin-left: 15px;
@@ -1289,6 +1316,7 @@ h5{
     }
     
     .article-monprofil{
+        margin-top: 0px;
         display: flex;
         flex-direction: column;   
         height: 680px;
@@ -1296,6 +1324,7 @@ h5{
     }
     
     .form-monprofil{
+        margin-top: -25px !important;
         width: 360px;
         border-radius: 2%;
     }
@@ -1376,8 +1405,8 @@ h5{
     }
     
     .btn-sup{
-        width: 120px;
-        margin-left: 115px;
+        width: 100px;
+        margin-left: 146px;
     }
     
     /*------------------NAV-BAR-BTN-----------------*/
@@ -1386,11 +1415,15 @@ h5{
     }
     
     /*-------------------BESOINS--------------------*/
+    .main-besoins{
+        margin-top: 20px;
+    }
+
     .main-besoins aside{
-        margin-top: 10px;
+        margin-top: 5px;
         width: 360px;
         height: 180px;
-        margin-left: -5px;
+        margin-left: 15px;
     }
     
     .article-besoins{
@@ -1398,10 +1431,10 @@ h5{
         flex-direction: column;
         margin-top: -20px;
         width: 360px !important;
-        height: 680px;
-        margin-left: -25px;
+        height: 470px;
+        margin-left: -5px;
     }
-    
+
     .form-besoins{
         width: 360px;
         border-radius: 2%;
@@ -1416,24 +1449,27 @@ h5{
     }
     
     .alerte-info{
-        margin-left: 30px !important;
-        font-size: 12px;
+        margin-left: 18px !important;
+        font-size: 10px;
+        text-align:center;
     }
     
     .paper-attention-b{
-        width: 350px;
+        width: 360px;
+        margin-top: 0px;
+        margin-left: 222px;
     }
     
     .p-droite-b{
         width: 30px;
-        margin-left: 160px;
-        margin-top: -10px;
+        margin-left: 540px !important;
+        margin-top: 0px;  
     }
     
     .p-gauche-b{
         width: 30px;
-        margin-left: -160px;
-        margin-top: -5px;
+        margin-right: 10px !important;
+        margin-top: 0px; 
     }
     
     .b-monprofil{
@@ -1445,23 +1481,27 @@ h5{
     }
     
     .btn-besoins{
-        margin-top: 120px;
-        margin-left: -2px;
-        width: 150px;
+        margin-top: 20px;
+        margin-left: 2px;
+        width: 125px;
     }
     
     .btn-besoins-suivant{
-        margin-top: 120px;
-        margin-left: -2px;
-        width: 150px;
+        margin-top: 20px;
+        margin-left: 2px;
+        width: 125px;
     }
 
     /*-----------------PRODUCTIONS------------------*/
+    .main-productions{
+        margin-top: 20px;
+    }
+
     .main-productions aside{
-        margin-top: 10px;
+        margin-top: 5px;
         width: 360px;
         height: 180px;
-        margin-left: -5px;
+        margin-left: 15px;
     }
     
     .article-productions{
@@ -1469,8 +1509,8 @@ h5{
         flex-direction: column;
         margin-top: -20px;
         width: 360px !important;
-        height: 680px;
-        margin-left: -25px;
+        height: 470px;
+        margin-left: -5px;
     }
     
     .form-productions{
@@ -1495,23 +1535,27 @@ h5{
     }
     
     .btn-productions{
-        margin-top: 120px;
-        margin-left: -2px;
-        width: 150px;
+        margin-top: 20px;
+        margin-left: 2px;
+        width: 125px;
     }
     
     .btn-productions-suivant{
-        margin-top: 120px;
-        margin-left: -2px;
-        width: 150px;
+        margin-top: 20px;
+        margin-left: 2px;
+        width: 125px;
     }
     
     /*-------------------DECHETS--------------------*/
+    .main-dechets{
+        margin-top: 20px;
+    }
+
     .main-dechets aside{
-        margin-top: 10px;
+        margin-top: 5px;
         width: 360px;
         height: 180px;
-        margin-left: -5px;
+        margin-left: 15px;
     }
     
     .article-dechets{
@@ -1519,8 +1563,8 @@ h5{
         flex-direction: column;
         margin-top: -20px;
         width: 360px !important;
-        height: 680px;
-        margin-left: -25px;
+        height: 470px;
+        margin-left: -5px;
     }
     
     .form-dechets{
@@ -1545,10 +1589,288 @@ h5{
     }
     
     .btn-dechets{
-        margin-top: 120px;
-        margin-left: -2px;
+        margin-top: 20px;
+        margin-right: 175px ;
+        width: 125px;
+    }
+}
+
+/*------------------------------------375PX-iPhone 6/7/8-------------------------------------*/
+@media screen and (max-width: 390px){
+    /*----------------NAV-BAR-ADMIN-----------------*/
+    .btn-deconnexion-admin{
+        margin-left: 150px !important;
+    }
+
+    /*----------------ACCUEIL-ADMIN-----------------*/
+    h5{
+        font-size: 1.6rem !important;
+        margin-top: 220px;
+    }
+
+    .bande-admin{
+        margin-left: 70px !important;
+    }
+
+    /*-----------------------NAV--------------------*/
+    /*------------NAV-LOGO------------*/
+    img{
+        margin-right: 210px;
+    }
+    
+    /*---------------------INDEX--------------------*/
+    .p-1{
+        font-size: 1.6rem !important;
+    }
+    
+    .p-index{
+        margin: 5px;
+        font-size: 1.1rem;
+    }
+    .p-index1{
+        margin: 0;
+        font-size: 1.1rem;
+    }
+    
+    /*--------------------FOOTER--------------------*/
+    footer{
+        margin-top: 511px !important;
+    }
+    
+    /*-------------------CONTACT--------------------*/
+    .main-contact{
+        margin: 0 !important;
+    }
+    
+    .article-contact form{
+        width: 300px;
+        height: 470px;;
+        margin-top: 0 !important;
+    }
+    
+    textarea{
+        height: 150px !important;
+    }
+    
+    .img-bg_contact{
+        display:none;
+    }
+    
+    /*------------------CONNEXION-------------------*/
+    .article-connexion{
+        margin-top: 260px;
+        margin-left: 175px;
+        position: initial;
+    }
+       
+    /*-----------------INSCRIPTION------------------*/
+    .main-sinscrire{
+        height: 300px;
+    }
+
+    .article-sinscrire{
+        margin-top: 260px;
+        margin-left: 175px;
+        position: initial;
+    }
+    
+    /*-----------------ENTREPRISE-------------------*/
+    .article-entreprises{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px !important;
+        width: 375px;
+        margin: 0;
+    }
+    /*---------------FICHE COMPLETE-----------------*/
+    .article-card-complete{
+        display: flex;
+        flex-direction: column;
+        width: 360px;
+        height: 1000px !important;
+    }
+    
+    .logo-vide{
+        width: 190px;
+        margin: 0px;
+    }
+    
+    .p-card-complete{
+        width: 350px;   
+    }
+    
+    #mapContainer{
+        width: 340px;
+        height: 250px !important;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    
+    /*------------------RECHERCHE-------------------*/
+    h3{
+        font-size: 1.5rem;
+    }
+    
+    .main-recherche{
+        margin-top: 40px !important;
+        width: 365px;
+    }
+    
+    .form-btn-radio{
+       margin-left: 10px;
+       display: flex;
+       justify-content: space-evenly;
+    }
+    
+    .article-btn-radio div label{
+        font-size: 1rem;
+    }
+    
+    .form-bar-search{
+        display: flex;
+        justify-content: center;
+        background-color: #579652 !important;
+        margin-left: 90px;
+        width: 150px;
+        height: 40px;
+    }
+    
+    .form-bar-search label{
+        margin-bottom: 20px;
+        font-size: 10px;
+    }
+    
+    .form-bar-search input{
+        width: 200px;
+        height: 38px;
+    }
+    
+    .btn-search{
+        margin-bottom: 28px;
+    }
+
+    .article-entreprises-search .logo-vide{
+        margin: 0px;
+    }
+    
+
+    /*------------------MON PROFIL------------------*/
+    /*-----------------------------*/
+    .p-2{
+        position: absolute;
+        margin-bottom: 110px;
+        margin-left: 115px;
+        font-size: 1.5rem;
+    }
+
+    .main-monprofil aside{
+        margin-left: -5px;
+    }
+    
+    .article-monprofil{
+        margin-left: -25px !important;
+    }
+    
+    .form-monprofil{
+        border-radius: 2%;
+    }
+    
+    .legend-2-monprofil{
+        font-size: 1.5rem !important;
+    }
+    
+    .btn-monprofil{
+        margin-top: 130px;
+        margin-left: 90px;
         width: 150px;
     }
+
+    /*-----------------SUPPRIME-COMPTE--------------*/
+    .p-sup{
+        font-size: 2rem;
+    }
+    
+    .btn-sup{
+        width: 100px;
+        margin-left: 146px;
+    }
+    
+    /*------------------NAV-BAR-BTN-----------------*/
+    .btn-deconnexion{
+        margin-left: 50px;
+    }
+    
+    /*-------------------BESOINS--------------------*/
+    .main-besoins aside{
+        margin-left: -5px;
+    }
+    
+    .article-besoins{
+        margin-left: -25px;
+        height: 395px;
+    }
+
+    .alerte-info{
+        margin-left: 15px !important;
+        font-size: 10px;
+        text-align:center;
+    }
+    
+    .paper-attention-b{
+        margin-left: 210px;
+    }
+    
+    .p-droite-b{
+        margin-left: 520px !important;
+    }
+    
+    .p-gauche-b{
+        margin-right: 10px !important;
+    }
+    
+    .textarea-besoins{
+        width: 300px;
+        height: 80px !important;
+    }
+    
+    /*-----------------PRODUCTIONS------------------*/
+    .main-productions aside{
+        margin-left: -5px;
+    }
+    
+    .article-productions{
+        height: 395px;
+        margin-left: -25px;
+    }
+
+    .form-productions fieldset{
+        width: 360px;
+    }
+    
+    .textarea-productions{
+        width: 300px;
+        height: 80px !important;
+    }
+    
+    /*-------------------DECHETS--------------------*/
+    .main-dechets aside{
+        margin-left: -5px;
+    }
+    
+    .article-dechets{
+        height: 395px;
+        margin-left: -25px;
+    }
+
+    .form-dechets fieldset{
+        width: 360px;
+    }
+    
+    .textarea-dechets{
+        width: 300px;
+        height: 80px !important;
+    }
+
 }
 
 /*----------------------------------------THE END-------------------------------------------------*/
