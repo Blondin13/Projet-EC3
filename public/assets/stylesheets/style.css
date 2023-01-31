@@ -178,7 +178,7 @@ h5{
 
 
 /*---------------------------------------------------NAV-BAR-----------------------------------------------------*/
-/*---------COLOR-NAV-BARS---------*/
+/*-----------NAV-BARS--------------*/
 .navbar{
     background-color: #086900 !important;
 }
@@ -635,6 +635,8 @@ b{
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+    margin: 0;
+    padding: 0;
 }
 
 /*-------------------CARD------------------*/

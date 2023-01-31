@@ -560,6 +560,10 @@ h5{
 /*-----------------------------------820PX-Ipad Air-Vertical--------------------------------------*/
 @media screen and (max-width: 835px){
     /*----------------NAV-BAR-ADMIN-----------------*/
+    .div-navbar-retour-acc-adm a{
+        margin-left: 350px;
+    }
+
     .btn-deconnexion-admin{
         margin-left: 480px !important;
     }
@@ -1010,6 +1014,18 @@ h5{
 /*------------------------------------414PX-iPhone 6/7/8 Plus-------------------------------------*/
 @media screen and (max-width: 430px){
     /*----------------NAV-BAR-ADMIN-----------------*/
+    .nav-logo img{
+        margin-left: 0px !important;
+    }
+
+    .div-navbar-retour-acc-adm ul{
+        margin: 0px !important;
+    }
+
+    .div-navbar-retour-acc-adm li{
+        margin: 0px !important;
+    }
+
     .btn-deconnexion-admin{
         margin-left: 190px !important;
     }
@@ -1869,6 +1885,54 @@ h5{
     .textarea-dechets{
         width: 300px;
         height: 80px !important;
+    }
+
+}
+
+/*------------------------------------320PX-iPhone 5/SE-------------------------------------------*/
+@media screen and (max-width: 340px){
+    /*------------NAV-BAR-------------*/
+    .access-admin img{
+        margin-right: 180px !important;
+        width: 40px;
+        height: 40px;
+    }
+
+    /*-------------LIEN---------------*/
+    a{
+        font-size: 1rem !important;
+        letter-spacing: 3px;
+    }
+    
+    /*-------------------------------------INDEX-----------------------------------------------*/
+    /*--------------TEXTE---------------*/
+    .p-3{
+        font-size: 1.5rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+
+    .p-1{
+        font-size: 1.5rem;
+    }
+
+    .p-index{
+        font-size: 1rem;
+
+    }
+    .p-index1{
+        font-size: 1rem;
+    }
+
+    /*--------------------------------FOOTER---------------------------------*/
+    footer{
+        height: 60px;
+        margin-top: 452px !important;
+    }
+
+    h2{
+        font-size: 1.2rem;
     }
 
 }
