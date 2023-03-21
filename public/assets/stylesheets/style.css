@@ -299,6 +299,7 @@ h1{
 /*----------------------------------------------------FOOTER-----------------------------------------------------*/
 footer{
     background-color: #086900 !important;
+    height: 80px;
     position: absolute;
     width: 100%;
     bottom: 0;
