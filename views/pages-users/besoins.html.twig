@@ -31,7 +31,7 @@
                     
                 <fieldset>
                     <label for="text"><b class="b-monprofil">Vos besoins</b></label>
-                    <textarea class="textarea-besoins" name="besoins" id="text" cols="30" rows="10" placeholder="..........">{{user.besoins}}</textarea>
+                    <textarea class="textarea-besoins" name="besoins" id="text" cols="30" rows="10" placeholder="Penser à séparer chaque besoin par une virgule">{{user.besoins}}</textarea>
                 <div class="div-2-btn">
                     <button class="btn-besoins" formaction="/besoins/{{user.id}}/{{step}}"><b>Valider</b></button>
                     <button class="btn-besoins-suivant" formaction="/besoins/{{user.id}}/{{nextStep}}"><b>Valider => Suivant</b></button>

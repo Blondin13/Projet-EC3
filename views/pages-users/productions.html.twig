@@ -31,7 +31,7 @@
                      
                 <fieldset>
                     <label for="text"><b class="p-monprofil"> Vos productions </b></label>
-                    <textarea class="textarea-productions" name="productions" id="text" cols="30" rows="10" placeholder="..........">{{user.productions}}</textarea>
+                    <textarea class="textarea-productions" name="productions" id="text" cols="30" rows="10" placeholder="Penser à séparer chaque production par une virgule">{{user.productions}}</textarea>
                         <div class="div-2-btn">
                             <button class="btn-productions" formaction="/productions/{{user.id}}/{{step}}"><b>Valider</b></button>
                             <button class="btn-productions-suivant" formaction="/productions/{{user.id}}/{{nextStep}}"><b>Valider => Suivant</b></button>

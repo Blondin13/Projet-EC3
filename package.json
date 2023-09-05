@@ -4,8 +4,8 @@
   "description": "projet diplome",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon .",
-    "test":"jest"
+  "start": "nodemon .",
+  "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "type": "module",
   "keywords": [],
