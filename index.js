@@ -18,9 +18,9 @@ const app = express(); // Crée une constante de l'application express
 app.use(session({ secret: "ssh", saveUninitialized: true, resave: true }));
 app.use(express.static("./public"));
 app.use(express.urlencoded({ extended: true }));
-app.listen(8004, () => {
+app.listen(8024, () => {
     // Ecoute sur le port 8004
-    console.log("Server a démarer dans http://localhost:8004"); // Renvoi le message "Server a démarer dans http://localhost:8004"
+    console.log("Server a démarer dans http://localhost:8024"); // Renvoi le message "Server a démarer dans http://localhost:8004"
 });
 
 //----------------------------------------MULTER----------------------------------------------------------------------------

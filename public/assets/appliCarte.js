@@ -17,8 +17,8 @@ window.onload = function(){
 
   // creation de l'incone marqueur
 var greenIcon = L.icon({
-  iconUrl:   'http://christophe-buire.ri7.tech:8004//assets/img/leaf-green.png',
-  shadowUrl: 'http://christophe-buire.ri7.tech:8004//assets/img/leaf-shadow.png',
+  iconUrl:   'http://christophe-buire.ri7.tech:8024//assets/img/leaf-green.png',
+  shadowUrl: 'http://christophe-buire.ri7.tech:8024//assets/img/leaf-shadow.png',
   iconSize:     [38, 95], // size of the icon
   shadowSize:   [50, 64], // size of the shadow
   iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
