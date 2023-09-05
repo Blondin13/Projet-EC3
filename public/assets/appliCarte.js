@@ -4,7 +4,7 @@ window.onload = function(){
     latitude: document.getElementById('mapContainer').dataset.latitude,
     longitude: document.getElementById('mapContainer').dataset.longitude
   }
-  console.log(coordonnees);
+
   // On initialise la carte sur les coordonnées GPS ([Latitude, longitude], zoom par defaut)
   let macarte = L.map('mapContainer').setView([coordonnees.latitude, coordonnees.longitude], 13)
 
@@ -17,8 +17,8 @@ window.onload = function(){
 
   // creation de l'incone marqueur
 var greenIcon = L.icon({
-  iconUrl:   'http://christophe-buire.ri7.tech:8024//assets/img/leaf-green.png',
-  shadowUrl: 'http://christophe-buire.ri7.tech:8024//assets/img/leaf-shadow.png',
+  iconUrl:   'http://christophe-buire.ri7.tech:8024/assets/img/leaf-green.png',
+  shadowUrl: 'http://christophe-buire.ri7.tech:8024/assets/img/leaf-shadow.png',
   iconSize:     [38, 95], // size of the icon
   shadowSize:   [50, 64], // size of the shadow
   iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location

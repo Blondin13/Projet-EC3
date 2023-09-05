@@ -40,7 +40,6 @@ export class UserController{
             objerror.errors.push("Ce mail à deja été utilisé"); //j'insere une erreur dans mon tableau d'erreur
             return objerror; // et je retourne mon tableau d'erreur
         }
-        
     }
     
     //-----------------------------------------------------------------------------------------------------------------------------------------------
