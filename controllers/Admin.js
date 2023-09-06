@@ -30,7 +30,7 @@ export class AdminController {
             return objerror; // Je retourne mon tableau d'erreur si il y en as
         }
 
-        let findAdmin = await Admin.findOne({ emailAdmin: admin.email }); //({ mailAdmin: admin.email }) // Je verifie si admin avec le meme mail existe en base
+        let findAdmin = await Admin.findOne({ email: admin.email }); //({ mailAdmin: admin.email }) // Je verifie si admin avec le meme mail existe en base
 
         if (!findAdmin) {
             // Si aucun admin en base
